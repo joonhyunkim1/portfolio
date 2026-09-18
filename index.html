@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="김준현 | Edge AI · Computer Vision Engineer" />
+    <title>김준현 · AI Systems Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="noise" aria-hidden="true"></div>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="첫 화면으로">JH<span>.</span></a>
+      <nav aria-label="주요 메뉴">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#journey">Journey</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="header-link" href="https://github.com/joonhyunkim1" target="_blank" rel="noreferrer">GitHub ↗</a>
+    </header>
+
+    <main id="top">
+      <section class="hero section-shell" aria-labelledby="hero-title">
+        <div class="hero-orb orb-one"></div><div class="hero-orb orb-two"></div>
+        <p class="eyebrow"><span></span> AVAILABLE FOR NEW CHALLENGES</p>
+        <div class="hero-layout">
+          <div>
+            <h1 id="hero-title">AI를 현실의<br /><em>움직임으로.</em></h1>
+            <p class="hero-copy">센서·영상·음향 데이터를 해석해, 엣지 환경에서<br />탐지부터 판단·제어까지 완성하는 AI 엔지니어입니다.</p>
+            <div class="hero-actions">
+              <a class="button primary" href="#projects">프로젝트 보기 <b>↓</b></a>
+              <a class="button quiet" href="#about">더 알아보기 <b>→</b></a>
+            </div>
+          </div>
+          <aside class="profile-card" aria-label="프로필 요약">
+            <div class="profile-top"><span class="pulse"></span><span>PROFILE / 01</span></div>
+            <div class="monogram">KJH</div>
+            <div class="profile-line"></div>
+            <p>김준현 <small>Kim Joonhyun</small></p>
+            <ul>
+              <li><span>FOCUS</span><b>Edge AI · Vision · Control</b></li>
+              <li><span>BASED IN</span><b>Seoul, Korea</b></li>
+              <li><span>EDUCATION</span><b>Hongik University</b></li>
+            </ul>
+          </aside>
+        </div>
+        <div class="quick-links" aria-label="요약 바로가기">
+          <a href="#projects"><i>01</i><strong>Selected<br />Projects</strong><b>↘</b></a>
+          <a href="#impact"><i>02</i><strong>Key<br />Impact</strong><b>↘</b></a>
+          <a href="#journey"><i>03</i><strong>Experience<br />& Learning</strong><b>↘</b></a>
+          <a href="#skills"><i>04</i><strong>Technical<br />Toolkit</strong><b>↘</b></a>
+        </div>
+      </section>
+
+      <section id="about" class="intro section-shell reveal">
+        <p class="section-label">01 — ABOUT</p>
+        <div class="intro-grid">
+          <h2>데이터를 읽고,<br />현장을 <em>바꿉니다.</em></h2>
+          <div class="intro-text">
+            <p>Computer Vision과 Edge AI를 기반으로 산업 현장의 이상 징후를 탐지하고, 그 결과를 실제 장비의 동작까지 연결해 왔습니다.</p>
+            <p>모델 정확도만이 아니라 입력 장치, 추론 지연, 통신 구조까지 함께 설계합니다. 제한된 환경에서도 작동하는 시스템을 만드는 것이 제 강점입니다.</p>
+            <a href="#journey" class="text-link">이력 살펴보기 <span>→</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section id="impact" class="impact section-shell reveal" aria-labelledby="impact-title">
+        <div class="section-heading"><p class="section-label">02 — IMPACT</p><h2 id="impact-title">숫자로 증명한<br /><em>문제 해결.</em></h2></div>
+        <div class="metrics">
+          <article><p class="metric-number">93.3<span>%</span></p><p>클래스당 8개 데이터로<br />달성한 Few-shot 정확도</p><small>MobileCLIP + CoOp</small></article>
+          <article><p class="metric-number">4.8<span>×</span></p><p>추론 지연을 줄여<br />개선한 처리 속도</p><small>94.6ms → 19.8ms</small></article>
+          <article><p class="metric-number">8.8<span>%</span></p><p>센서별 전처리 최적화로<br />개선한 LSTM 예측 오차</p><small>Kalman · Hampel · Sweep</small></article>
+        </div>
+      </section>
+
+      <section id="projects" class="projects section-shell reveal" aria-labelledby="project-title">
+        <div class="section-heading row"><div><p class="section-label">03 — SELECTED PROJECTS</p><h2 id="project-title">현장에서 검증한<br /><em>AI 시스템.</em></h2></div><p class="project-note">카드를 선택하면<br />해당 프로젝트 내용으로 이동합니다.</p></div>
+        <div class="project-list">
+          <a class="project-card featured" href="#project-edge">
+            <div class="card-index">01 / EDGE AI</div><div class="card-visual vision"><span class="crosshair"></span><span class="vision-label">ANOMALY<br />DETECTED</span><span class="vision-dot"></span></div>
+            <div class="card-content"><div><p>INDUSTRIAL SAFETY</p><h3>Edge AI 기반<br />이상 상황 탐지</h3></div><span class="round-arrow">↘</span></div>
+            <ul class="tags"><li>MobileCLIP</li><li>TensorRT</li><li>Jetson Orin</li></ul>
+          </a>
+          <a class="project-card" href="#project-factory">
+            <div class="card-index">02 / AIoT</div><div class="card-visual grid-visual"><span>SAFE<br />WORKPLACE</span></div>
+            <div class="card-content"><div><p>AIoT PLATFORM</p><h3>스마트 산업 현장<br />안전 모니터링</h3></div><span class="round-arrow">↘</span></div>
+            <ul class="tags"><li>YOLO</li><li>Sensor Data</li><li>Web / App</li></ul>
+          </a>
+          <a class="project-card" href="#project-tracking">
+            <div class="card-index">03 / MULTIMODAL</div><div class="card-visual track-visual"><span class="path path-a"></span><span class="path path-b"></span><span class="track-object">AI</span></div>
+            <div class="card-content"><div><p>VISION + AUDIO</p><h3>복합 신호 기반<br />실시간 위험 감지</h3></div><span class="round-arrow">↘</span></div>
+            <ul class="tags"><li>YOLOv6n</li><li>MFCC + CNN</li><li>Raspberry Pi</li></ul>
+          </a>
+        </div>
+      </section>
+
+      <section class="details section-shell reveal" aria-label="프로젝트 상세">
+        <article id="project-edge" class="detail-project"><div class="detail-no">01</div><div><p class="section-label">EDGE AI / 2026</p><h3>데이터가 적어도, 현장에서는 멈추지 않도록.</h3></div><div class="detail-copy"><p>작업자·작업장 이상 상황을 탐지하는 시스템을 개발했습니다. MobileCLIP에 CoOp을 적용해 Few-shot 분류 모델을 구현하고, Grad-CAM과 PID 제어·RS485 통신으로 Pan/Tilt 구동까지 연결했습니다.</p><p>클래스당 8개 데이터로 93.3% 정확도를 달성했고, ONNX·TensorRT FP16 최적화와 카메라 입력 개선으로 추론 지연을 94.6ms에서 19.8ms로 단축했습니다.</p></div></article>
+        <article id="project-factory" class="detail-project"><div class="detail-no">02</div><div><p class="section-label">AIoT / 2024—2026</p><h3>감지에서 판단,<br />대응까지 이어지게.</h3></div><div class="detail-copy"><p>온·습도, CO, CO₂, TVOC, 미세먼지, CT·음향 센서와 RGB·열화상 카메라를 결합한 산업 현장 안전관리 시스템을 개발했습니다.</p><p>Arduino Mega2560 기반 데이터 수집부터 센서별 필터링·시계열 예측·영상 분석, 경고와 구동기 제어, 서버·Web/App 통합까지 ‘탐지-판단-대응’의 전체 흐름을 설계했습니다.</p></div></article>
+        <article id="project-tracking" class="detail-project"><div class="detail-no">03</div><div><p class="section-label">MULTIMODAL AI / 2026</p><h3>보이는 위험과<br />들리는 위험을 함께.</h3></div><div class="detail-copy"><p>열화상·RGB 영상의 객체 탐지와 음향 신호 분석을 결합해 위험 상황을 실시간으로 감지했습니다. YOLOv6n·DeepSORT 기반 다중 객체 추적을 Raspberry Pi 4B에서 통합하고, 병목 최적화로 추적 속도를 1 FPS에서 8 FPS까지 개선했습니다.</p><p>음향 데이터에는 MFCC 변환과 CNN을 적용해 폭발음·비명음·배경음을 분류했고, 데이터 증강을 통해 최대 99.7% 정확도를 검증했습니다.</p></div></article>
+      </section>
+
+      <section id="research" class="research section-shell reveal" aria-labelledby="research-title">
+        <div class="section-heading row"><div><p class="section-label">04 — RESEARCH</p><h2 id="research-title">연구를 통해<br /><em>현장에 답하다.</em></h2></div><p class="project-note">논문·학회 발표를 통해<br />검증한 시스템 연구</p></div>
+        <div class="paper-list">
+          <article><span>01</span><div><p>2026 IKEEE SUMMER CONFERENCE · FIRST AUTHOR</p><h3>산업안전 모니터링을 위한<br />MobileCLIP-CoOp 모델의 Edge AI 적용</h3></div><strong>93.3%<small>8 samples / class</small></strong></article>
+          <article><span>02</span><div><p>KIIS AUTUMN CONFERENCE 2025 · FIRST AUTHOR</p><h3>임베디드 시스템 환경에서의 CCTV 기반<br />실시간 작업자 안전 모니터링 알고리즘</h3></div><strong>15 FPS<small>Jetson Nano</small></strong></article>
+          <article><span>03</span><div><p>SMART MEDIA JOURNAL · SECOND AUTHOR</p><h3>임베디드 환경에서 딥러닝 기반<br />전염병 확산 방지 시스템</h3></div><strong>VISION<small>+ Audio + Edge</small></strong></article>
+        </div>
+      </section>
+
+      <section id="journey" class="journey section-shell reveal">
+        <div class="section-heading"><p class="section-label">05 — JOURNEY</p><h2>배움에서 현장으로,<br /><em>계속 확장 중.</em></h2></div>
+        <div class="timeline">
+          <article><time>2025 — 2027</time><div><h3>홍익대학교 석사</h3><p>전자전기공학 · 전기전자(SW)</p></div><span>EDUCATION</span></article>
+          <article><time>2024 — 2026</time><div><h3>산업 현장 AIoT 프로젝트</h3><p>중소기업산학협력센터(서울) · 참여연구원</p></div><span>RESEARCH</span></article>
+          <article><time>2024 — 2025</time><div><h3>NAVER Boostcamp AI Tech 7기</h3><p>Computer Vision · Classification / Detection / Segmentation</p></div><span>LEARNING</span></article>
+          <article><time>2023 — 2024</time><div><h3>Embedded AI Lab 학부연구생</h3><p>AIoT 기반 터널 스마트 조명 제어·교통 상황 분석</p></div><span>RESEARCH</span></article>
+          <article><time>2018 — 2025</time><div><h3>홍익대학교 학사</h3><p>전자전기공학 · 전기전자(SW)</p></div><span>EDUCATION</span></article>
+        </div>
+      </section>
+
+      <section id="skills" class="skills section-shell reveal"><p class="section-label">06 — TOOLKIT</p><div class="skills-grid"><h2>기술은 도구이고,<br /><em>연결이 역량입니다.</em></h2><div class="skill-groups"><div><p>AI / VISION</p><ul><li>PyTorch</li><li>TensorFlow</li><li>OpenCV</li><li>YOLO</li></ul></div><div><p>EDGE / DEPLOY</p><ul><li>Jetson Orin</li><li>TensorRT</li><li>ONNX</li><li>Docker</li></ul></div><div><p>SYSTEM / CONTROL</p><ul><li>Python · C/C++</li><li>Linux · Git</li><li>RS485 · PID</li><li>Arduino · AIoT</li></ul></div></div></div></section>
+    </main>
+
+    <footer id="contact" class="footer"><div class="section-shell"><p class="section-label">07 — CONTACT</p><h2>함께, 더 나은<br /><em>현장을 만들어요.</em></h2><a class="email" href="mailto:joon5159@naver.com">joon5159@naver.com <span>↗</span></a><div class="footer-bottom"><span>© 2026 KIM JOONHYUN</span><a href="#top">BACK TO TOP ↑</a><a href="https://github.com/joonhyunkim1" target="_blank" rel="noreferrer">GITHUB ↗</a></div></div></footer>
+    <script src="script.js"></script>
+  </body>
+</html>
