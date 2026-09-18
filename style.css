@@ -163,6 +163,12 @@ h2 {
   color: #c3d5ff;
 }
 
+.badge.team {
+  border-color: var(--blue-soft);
+  background: transparent;
+  color: var(--blue-soft);
+}
+
 /* 기술 태그 */
 .tags {
   display: flex;
@@ -566,6 +572,13 @@ h2 {
   color: var(--muted);
   font: .64rem var(--mono);
   letter-spacing: .04em;
+}
+
+/* 과제번호 */
+.record-id {
+  color: #5d6780;
+  font: .6rem var(--mono);
+  letter-spacing: .02em;
 }
 
 .record-body h3 {
