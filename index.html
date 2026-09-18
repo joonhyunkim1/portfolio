@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css?v=20260919" />
+    <link rel="stylesheet" href="style.css?v=2026091904" />
   </head>
   <body>
     <div class="noise" aria-hidden="true"></div>
@@ -19,8 +19,7 @@
         <a href="#profile">프로필</a>
         <a href="#papers">학술논문</a>
         <a href="#grants">연구과제</a>
-        <a href="#projects">프로젝트</a>
-        <a href="#personal">개인 프로젝트</a>
+        <a href="#personal">프로젝트</a>
         <a href="#activities">활동</a>
         <a href="#hobby">취미</a>
       </nav>
@@ -64,7 +63,10 @@
             <div class="panel lab-panel">
               <p class="panel-label">연구실 · 지도교수</p>
               <p class="lab-name">지능정보처리연구실</p>
-              <p class="lab-prof">임종태 교수</p>
+              <ul class="lab-profs">
+                <li><span>지도교수</span>임종태 교수</li>
+                <li><span>공동지도교수</span>조성원 교수</li>
+              </ul>
             </div>
 
             <div class="panel edu-panel">
@@ -161,7 +163,7 @@
             </ul>
           </div>
 
-          <!-- 우측: 연구과제 · 개인 프로젝트 -->
+          <!-- 우측: 연구과제 · 개인·팀 프로젝트 -->
           <div class="side-column">
             <div class="panel list-panel">
               <p class="panel-label">연구과제 참여 <b>4건 · 국가 R&amp;D</b></p>
@@ -186,7 +188,7 @@
             </div>
 
             <div class="panel list-panel">
-              <p class="panel-label">개인 프로젝트 <b>4건</b></p>
+              <p class="panel-label">개인·팀 프로젝트 <b>6건</b></p>
               <ul class="mini-list grant">
                 <li><a class="mini-link" href="#personal-1">
                   <p>ResumeAssistant — 로컬 RAG 기반 자기소개서 작성 도우미</p>
@@ -203,7 +205,17 @@
                 <li><a class="mini-link" href="#personal-4">
                   <span class="badge team">팀 프로젝트</span>
                   <p>코스피 7000간다 — 주식 시장 RAG 일일 증시 보고서</p>
-                  <small>LlamaIndex · HyperCLOVA X · 2025.07</small>
+                  <small>미래에셋 AI 페스티벌 · LlamaIndex · 2025.07</small>
+                </a></li>
+                <li><a class="mini-link" href="#personal-5">
+                  <span class="badge team">팀 프로젝트</span>
+                  <p>팔레타이징 적재 최적화 알고리즘 — CJ대한통운 미래기술챌린지</p>
+                  <small>최종 임원 PT 진출 · EMS 휴리스틱 · 2024</small>
+                </a></li>
+                <li><a class="mini-link" href="#personal-6">
+                  <span class="badge team">팀 프로젝트</span>
+                  <p>게이미피케이션 요소를 결합한 학습 어플 개발</p>
+                  <small>HIVE · Random Forest · 2022.10</small>
                 </a></li>
               </ul>
             </div>
@@ -265,8 +277,12 @@
                 클래스당 8개 데이터만으로 Mask on/off 분류 정확도 93.3%를 달성했습니다.
               </p>
               <p>
-                ONNX 변환과 TensorRT FP16 최적화를 거쳐 Jetson Orin에서 19.8ms 추론을 확인했고,
-                최적화 전 대비 4.8배의 속도 향상을 얻었습니다.
+                ONNX 변환과 TensorRT FP16 최적화에 카메라 입력 단계 개선을 더해
+                Jetson Orin에서 추론 지연을 94.6ms에서 19.8ms로 줄여 4.8배의 속도 향상을 얻었습니다.
+              </p>
+              <p>
+                탐지 결과는 Grad-CAM으로 시각화해 이상이 발생한 위치를 산출하고,
+                이 좌표를 PID 제어와 RS485 통신으로 Pan/Tilt 구동부에 전달해 카메라가 대상을 따라가도록 연결했습니다.
               </p>
               <ul class="tags">
                 <li>MobileCLIP-S2</li>
@@ -274,6 +290,8 @@
                 <li>Few-shot Learning</li>
                 <li>TensorRT FP16</li>
                 <li>Jetson Orin</li>
+                <li>Grad-CAM</li>
+                <li>PID · RS485 Pan/Tilt</li>
               </ul>
             </div>
           </li>
@@ -323,8 +341,13 @@
                 음향 쪽에는 CNN 기반 인식 알고리즘을 적용해 기침 소리를 탐지했습니다.
                 객체 추적과 음향 인식 기능을 Raspberry Pi 4B 환경에 통합해 실시간 임베디드 시스템으로 구현했습니다.
               </p>
+              <p>
+                다중 객체 추적은 YOLOv6n과 DeepSORT로 구성했고, 파이프라인 단계별 병목을 측정해
+                Raspberry Pi 4B에서 추적 속도를 1 FPS에서 8 FPS까지 개선했습니다.
+              </p>
               <ul class="tags">
                 <li>YOLOv6n</li>
+                <li>DeepSORT</li>
                 <li>다중 객체 추적</li>
                 <li>CNN 음향 인식</li>
                 <li>Raspberry Pi 4B</li>
@@ -406,9 +429,17 @@
             <div class="record-body">
               <h3>이사 총괄 플래너 서비스 AI 솔루션 개발</h3>
               <p class="venue">중소기업기술정보진흥원 · 창업성장기술개발사업(디딤돌) · 참여연구자</p>
-              <p>
-                이사 준비 과정 전반을 관리하는 플래너 서비스에 들어갈 AI 솔루션을 개발하는 과제입니다.
-              </p>
+              <p class="role-label">수행 역할</p>
+              <ul class="role-list">
+                <li>딥러닝·영상분석 기반 물품 인식 및 CBM 계산 알고리즘/SW 개발</li>
+                <li>AI 기반 서비스 추천 알고리즘/SW 개발</li>
+                <li>전체 시스템 통합 및 성능 검증</li>
+              </ul>
+              <ul class="tags">
+                <li>물품 인식</li>
+                <li>CBM 산출</li>
+                <li>추천 알고리즘</li>
+              </ul>
             </div>
           </li>
 
@@ -422,15 +453,19 @@
             <div class="record-body">
               <h3>복합 AIoT 기반 산업현장 작업자 안전 모니터링 시스템 개발</h3>
               <p class="venue">중소기업기술정보진흥원 · 스마트 제조혁신 기술개발사업(R&amp;D) · 참여연구자</p>
-              <p>
-                영상·음향·센서를 하나의 AIoT 플랫폼으로 묶어 작업자 안전을 관리하는 과제입니다.
-                데이터 수집부터 분석, 경고 발생, 구동기 제어, 서버 및 Web/App 연동까지
-                탐지-판단-대응의 전체 흐름을 구성하는 역할을 맡았습니다.
-              </p>
+              <p class="role-label">수행 역할</p>
+              <ul class="role-list">
+                <li>CCTV 기반 작업자 안전 모니터링 알고리즘 및 SW 개발</li>
+                <li>열화상 영상 기반 작업자 안전상황 분석 및 모니터링 알고리즘 개발</li>
+                <li>작업자 상태·안전장비 착용 여부 등 영상 기반 상황분석 알고리즘 개발</li>
+                <li>작업장 환경위험 및 이상상황 탐지를 위한 AI 알고리즘·SW 개발</li>
+                <li>작업장 안전 모니터링 시스템의 통합 및 실증 테스트 참여</li>
+              </ul>
               <ul class="tags">
-                <li>AIoT</li>
-                <li>Edge-Server 연동</li>
-                <li>구동기 제어</li>
+                <li>CCTV</li>
+                <li>열화상</li>
+                <li>안전장비 탐지</li>
+                <li>실증 테스트</li>
               </ul>
             </div>
           </li>
@@ -445,18 +480,25 @@
             <div class="record-body">
               <h3>다중 센서 기반 작업장 환경위험 탐지 및 대응 기술 개발</h3>
               <p class="venue">중소기업기술정보진흥원 · 스마트 제조혁신 기술개발사업(R&amp;D) · 참여연구자</p>
-              <p>
-                온·습도, CO, CO₂, TVOC, 미세먼지 등 작업장 환경 데이터를 다중 센서로 수집하고,
-                센서별 특성에 맞춘 전처리와 시계열 예측을 적용해 환경 위험을 사전에 판단하는 과제입니다.
-              </p>
-              <p>
-                Kalman 필터와 Hampel 필터를 센서별로 조합하고 파라미터 스윕으로 최적 조합을 탐색해,
-                LSTM 기반 예측 오차를 8.8% 개선했습니다.
-              </p>
+              <p class="role-label">수행 역할</p>
+              <ul class="role-list">
+                <li>작업장 환경위험 센서 데이터를 기반으로 위험상황 탐지 알고리즘 및 SW 개발</li>
+                <li>환경센서·열화상·CT·오디오 센서 데이터의 특성 분석 및 위험상황 탐지 알고리즘 개발</li>
+                <li>센서 데이터 전처리·분석 및 AI 기반 작업장 환경위험 예측 모델 개발</li>
+                <li>구동기 작동 등 현장 대응을 위한 위험상황 판단·제어 로직 개발</li>
+                <li>작업장 환경위험 탐지·대응 단말기, 센서·구동기, 서버·WEB/APP 간 시스템 통합 및 실증 테스트 참여</li>
+              </ul>
+              <p class="role-label">세부 내용</p>
+              <ul class="role-list">
+                <li>온·습도, CO, CO₂, TVOC, 미세먼지, CT·음향 센서와 RGB·열화상 카메라를 결합한 통합 안전관리 시스템</li>
+                <li>Arduino Mega2560 기반 다중 센서 데이터 수집, 센서마다 다른 노이즈 특성에 맞춰 필터 조합을 개별 설계</li>
+                <li>시계열 예측·영상 분석으로 위험도를 판정하고 경고·구동기 제어로 연결, 결과는 서버를 거쳐 Web/App으로 전달</li>
+              </ul>
               <ul class="tags">
                 <li>다중 센서</li>
-                <li>Kalman · Hampel</li>
-                <li>LSTM</li>
+                <li>위험 예측 모델</li>
+                <li>구동기 제어</li>
+                <li>시스템 통합</li>
               </ul>
             </div>
           </li>
@@ -471,124 +513,30 @@
             <div class="record-body">
               <h3>배전반/분전반 등 전기설비 발생 전기사고의 지능형 사전 예측 및 안전 모니터링 시스템 개발</h3>
               <p class="venue">한국산업기술기획평가원 · 재난안전 융합기술 고도화 지원 · 참여연구자</p>
-              <p>
-                배전반과 분전반에서 발생하는 전기 사고를 사고 이전 단계에서 예측하는 과제입니다.
-                설비에서 수집되는 신호를 분석해 이상 징후를 판별하고,
-                사고로 이어지기 전에 경고를 발생시키는 모니터링 시스템을 목표로 했습니다.
-              </p>
+              <p class="role-label">수행 역할</p>
+              <ul class="role-list">
+                <li>열화상 IoT 센서 및 인터페이스 모듈 개발</li>
+                <li>센서 Raw 데이터 처리·수치화 및 프로토콜에 따른 구조화</li>
+                <li>열화상 기반 이상징후 탐지·영상처리 알고리즘 개발</li>
+                <li>RS485 통신 구현 및 넘버링을 통한 Master-Slave 구조 구현</li>
+              </ul>
               <ul class="tags">
-                <li>전기설비 진단</li>
-                <li>사전 예측</li>
-                <li>이상 탐지</li>
+                <li>열화상 IoT 센서</li>
+                <li>이상징후 탐지</li>
+                <li>RS485</li>
+                <li>Master-Slave</li>
               </ul>
             </div>
           </li>
         </ol>
       </section>
 
-      <!-- 04. 프로젝트 ================================================== -->
-      <section id="projects" class="projects section-shell reveal">
-        <div class="section-heading">
-          <p class="section-label">04</p>
-          <h2>프로젝트</h2>
-          <p class="section-sub">Engineering Detail · 3건</p>
-        </div>
-
-        <ol class="record-list">
-          <li class="record" id="project-1">
-            <div class="record-meta">
-              <span class="record-no">01</span>
-              <span class="badge">Edge AI</span>
-              <time>2026</time>
-            </div>
-            <div class="record-body">
-              <h3>Edge AI 기반 작업장·작업자 이상 상황 탐지 시스템</h3>
-              <p class="venue">모델 학습 · 엣지 최적화 · 구동부 제어</p>
-              <p>
-                MobileCLIP에 CoOp을 적용한 Few-shot 분류 모델을 구현하고, 탐지 결과를 Grad-CAM으로 시각화해
-                이상이 발생한 위치를 산출했습니다. 산출된 좌표는 PID 제어와 RS485 통신을 통해
-                Pan/Tilt 구동부로 전달되어 카메라가 대상을 따라가도록 연결했습니다.
-              </p>
-              <p>
-                모델 정확도뿐 아니라 파이프라인 전체의 지연을 함께 다뤘습니다.
-                ONNX 변환과 TensorRT FP16 최적화, 카메라 입력 단계 개선을 통해
-                추론 지연을 94.6ms에서 19.8ms로 단축해 약 4.8배의 속도 향상을 얻었습니다.
-              </p>
-              <ul class="tags">
-                <li>MobileCLIP</li>
-                <li>CoOp</li>
-                <li>Grad-CAM</li>
-                <li>TensorRT</li>
-                <li>Jetson Orin</li>
-                <li>PID · RS485</li>
-              </ul>
-            </div>
-          </li>
-
-          <li class="record" id="project-2">
-            <div class="record-meta">
-              <span class="record-no">02</span>
-              <span class="badge">AIoT</span>
-              <time>2024 — 2026</time>
-            </div>
-            <div class="record-body">
-              <h3>스마트 산업 현장 안전 모니터링 플랫폼</h3>
-              <p class="venue">센서 수집 · 시계열 분석 · 시스템 통합</p>
-              <p>
-                온·습도, CO, CO₂, TVOC, 미세먼지, CT 센서와 음향 센서, RGB·열화상 카메라를 결합한
-                통합 안전관리 시스템입니다. Arduino Mega2560을 기반으로 다중 센서 데이터를 수집하고,
-                센서마다 노이즈 특성이 달라 필터 조합을 개별적으로 설계했습니다.
-              </p>
-              <p>
-                수집된 데이터는 시계열 예측과 영상 분석을 거쳐 위험도를 판정하고,
-                경고 발생과 구동기 제어로 이어집니다. 결과는 서버를 통해 Web/App으로 전달되어
-                현장 밖에서도 상태를 확인할 수 있도록 구성했습니다.
-              </p>
-              <ul class="tags">
-                <li>YOLO</li>
-                <li>다중 센서</li>
-                <li>LSTM</li>
-                <li>Arduino</li>
-                <li>Web / App</li>
-              </ul>
-            </div>
-          </li>
-
-          <li class="record" id="project-3">
-            <div class="record-meta">
-              <span class="record-no">03</span>
-              <span class="badge">Multimodal</span>
-              <time>2026</time>
-            </div>
-            <div class="record-body">
-              <h3>영상·음향 복합 신호 기반 실시간 위험 감지</h3>
-              <p class="venue">다중 객체 추적 · 음향 분류 · 병목 최적화</p>
-              <p>
-                열화상과 RGB 영상의 객체 탐지 결과에 음향 분석을 결합해 위험 상황을 판별했습니다.
-                YOLOv6n과 DeepSORT 기반의 다중 객체 추적을 Raspberry Pi 4B 환경에 통합했고,
-                파이프라인 단계별 병목을 측정해 추적 속도를 1 FPS에서 8 FPS까지 개선했습니다.
-              </p>
-              <p>
-                음향 신호에는 MFCC 변환 후 CNN 분류기를 적용해 폭발음·비명음·배경음을 구분했습니다.
-                데이터 증강으로 학습 데이터의 편중을 줄여 최대 99.7%의 분류 정확도를 확인했습니다.
-              </p>
-              <ul class="tags">
-                <li>YOLOv6n</li>
-                <li>DeepSORT</li>
-                <li>MFCC · CNN</li>
-                <li>Raspberry Pi 4B</li>
-              </ul>
-            </div>
-          </li>
-        </ol>
-      </section>
-
-      <!-- 05. 개인 프로젝트 ============================================= -->
+      <!-- 04. 개인 · 팀 프로젝트 ======================================== -->
       <section id="personal" class="personal section-shell reveal">
         <div class="section-heading">
-          <p class="section-label">05</p>
-          <h2>개인 프로젝트</h2>
-          <p class="section-sub">Personal &amp; Team Projects · 개인 3건 · 팀 1건</p>
+          <p class="section-label">04</p>
+          <h2>개인 · 팀 프로젝트</h2>
+          <p class="section-sub">Personal &amp; Team Projects · 개인 3건 · 팀 3건</p>
         </div>
 
         <ol class="record-list">
@@ -689,10 +637,11 @@
             </div>
             <div class="record-body">
               <h3>코스피 7000간다 — 주식 시장 RAG 기반 일일 증시 보고서 생성 시스템</h3>
-              <p class="venue">팀 프로젝트 · 대회 출전 · LlamaIndex · CLOVA Embedding · HyperCLOVA X (HCX-005)</p>
+              <p class="venue">팀 프로젝트 · 2025 미래에셋 AI 페스티벌 · 개발 전담 · LlamaIndex · CLOVA Embedding · HyperCLOVA X (HCX-005)</p>
               <p>
-                팀으로 대회에 출전해 개발한 프로젝트로, 전일 KRX 거래 데이터와 최근 24시간 뉴스를 수집해 벡터 DB를 구성하고,
-                전일 시장 요약과 당일 주목 종목 분석을 담은 일일 증시 보고서를 생성하는 시스템입니다.
+                2025 미래에셋 AI 페스티벌에 팀으로 출전한 프로젝트입니다. 전일 KRX 거래 데이터와 최근 24시간 뉴스를 수집해 벡터 DB를 구성하고,
+                전일 시장 요약과 당일 주목 종목 분석을 담은 일일 증시 보고서를 생성합니다.
+                데이터 수집부터 RAG 파이프라인, 보고서 생성까지 개발 전체를 맡았습니다.
               </p>
               <p>
                 1차 벡터 DB에서 이슈 종목 후보 3개를 근거와 함께 도출한 뒤, 해당 종목의 거래 데이터와 뉴스를
@@ -708,13 +657,66 @@
               <a class="record-link" href="https://github.com/joonhyunkim1/NaverMiraeAsset" target="_blank" rel="noreferrer">GitHub ↗</a>
             </div>
           </li>
+
+          <li class="record" id="personal-5">
+            <div class="record-meta">
+              <span class="record-no">05</span>
+              <span class="badge team">팀 프로젝트</span>
+              <time>2024</time>
+            </div>
+            <div class="record-body">
+              <h3>팔레타이징 적재 최적화 알고리즘 — 2024 CJ대한통운 미래기술챌린지</h3>
+              <p class="venue">팀 프로젝트 (2인, 팀 P618) · 팔레타이징 부문 · 최종 임원 PT 진출</p>
+              <p>
+                순차적으로 들어오는 랜덤한 크기의 박스를 한정된 공간의 팔레트 위에 효율적으로 쌓는 적재 최적화 알고리즘을 개발했습니다.
+                공간 활용, 탐색 시간 단축, 무게 중심과 낙하 위험을 고려한 안정성을 함께 기준으로 삼았습니다.
+              </p>
+              <p class="role-label">주요 내용</p>
+              <ul class="role-list">
+                <li>EMS(Empty Maximal-Space)와 Difference Process 휴리스틱으로 박스를 놓을 때마다 적재 가능한 빈 공간 집합을 갱신해 탐색 시간 단축</li>
+                <li>좌표 탐색 가중치(x, y, z)를 조정해 원점 우선 적재, 층별 적재, 축 방향 적재 전략을 비교하고, 가중치를 0~10 범위에서 0.1 간격으로 바꿔 가며 최대 적재율 측정</li>
+                <li>메인 팔레트에 놓을 수 없을 때 입력 박스와 버퍼 팔레트의 박스 크기를 비교해 큰 박스부터 적재하는 버퍼 활용 흐름 설계</li>
+                <li>버퍼 미사용 · 모서리 4개만 사용 · 최대 활용 세 가지 전략을 비교해, 버퍼를 최대한 활용할 때 최대 적재율 60.73%, 평균 54.01%로 가장 높게 측정</li>
+                <li>Matplotlib 3D 시각화로 적재 과정을 GIF로 기록해 경계 이탈과 박스 겹침 여부 검증</li>
+              </ul>
+              <ul class="tags">
+                <li>Python</li>
+                <li>3D Bin Packing</li>
+                <li>EMS 휴리스틱</li>
+                <li>NumPy</li>
+                <li>Matplotlib</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="record" id="personal-6">
+            <div class="record-meta">
+              <span class="record-no">06</span>
+              <span class="badge team">팀 프로젝트</span>
+              <time>2022.10 — 2023.01</time>
+            </div>
+            <div class="record-body">
+              <h3>게이미피케이션 요소를 결합한 학습 어플 개발</h3>
+              <p class="venue">팀 프로젝트 · HIVE(벤처창업동아리) · 개발</p>
+              <p class="role-label">내용</p>
+              <ul class="role-list">
+                <li>수능 기출 문제 수집 및 문항 번호, 배점, 정답률 메타데이터를 JSON 형태로 구조화</li>
+                <li>랜덤 포레스트 모델을 활용하여 난이도별 문제 분류 알고리즘 개발</li>
+              </ul>
+              <ul class="tags">
+                <li>데이터 수집 · 전처리</li>
+                <li>Random Forest</li>
+                <li>JSON</li>
+              </ul>
+            </div>
+          </li>
         </ol>
       </section>
 
-      <!-- 06. 활동 · 학력 =============================================== -->
+      <!-- 05. 활동 · 학력 =============================================== -->
       <section id="activities" class="activities section-shell reveal">
         <div class="section-heading">
-          <p class="section-label">06</p>
+          <p class="section-label">05</p>
           <h2>활동 · 학력</h2>
           <p class="section-sub">Experience &amp; Education</p>
         </div>
@@ -724,31 +726,42 @@
             <time>2025.03 — 2027.02</time>
             <div>
               <h3>홍익대학교 대학원 석사과정</h3>
-              <p>전자전기공학과 · 지능정보처리연구실 (지도교수 임종태)</p>
+              <p>전자전기공학과 · 지능정보처리연구실 (지도교수 임종태, 공동지도교수 조성원)</p>
             </div>
             <span>학력</span>
+          </article>
+          <article>
+            <time>2024.08 — 2025.02</time>
+            <div>
+              <h3>NAVER Boostcamp AI Tech 7기 (Computer Vision)</h3>
+              <p>NAVER Connect Foundation · 1,008시간 수료 · 머신러닝·딥러닝, PyTorch 모델 구현, 모델 경량화 및 Production Serving, 생성형 AI·MLOps</p>
+              <p class="timeline-detail">프로젝트 — ImageNet-Sketch Classification · 다국어 영수증 OCR 데이터 전처리 · 재활용 쓰레기 Object Detection · X-ray Image Bone Segmentation · 중고차 재고 절감을 위한 생산량 최적화</p>
+            </div>
+            <span>교육</span>
           </article>
           <article>
             <time>2024.07 — 2027.09</time>
             <div>
               <h3>연구과제 참여연구원</h3>
-              <p>국가 R&amp;D 과제 4건 참여 · 영상/센서 분석 및 시스템 통합 담당</p>
+              <p>국가 R&amp;D 과제 4건 참여 · 영상/센서 분석, 서보모터 및 구동기 제어, 시스템 통합 담당</p>
             </div>
             <span>연구</span>
           </article>
           <article>
-            <time>2024 — 2025</time>
+            <time>2024.04</time>
             <div>
-              <h3>NAVER Boostcamp AI Tech 7기</h3>
-              <p>Computer Vision 트랙 · Classification / Object Detection / Segmentation 과정 수료</p>
+              <h3>데이터/AI 활용 역량강화과정 (심화)</h3>
+              <p>K-ICT 빅데이터센터 · 20시간 수료 · 생성형 AI·LLM 활용, Prompt Engineering, Gemini 기반 텍스트·이미지 분석 실습</p>
+              <p class="timeline-detail">프로젝트 — Gemini API 기반 의료 이미지 분석 서비스 개발</p>
             </div>
-            <span>교외 활동</span>
+            <span>교육</span>
           </article>
           <article>
-            <time>2023 — 2024</time>
+            <time>2023.09 — 2024.02</time>
             <div>
-              <h3>Embedded AI Lab 학부연구생</h3>
-              <p>AIoT 기반 터널 스마트 조명 제어 및 교통 상황 분석 연구 참여</p>
+              <h3>지능정보처리연구실 학부연구생</h3>
+              <p>열화상 센서 기반 객체 검출 및 분석 기술 개발</p>
+              <p class="timeline-detail">학습 데이터 1,288장 수집·Annotation 및 Augmentation · 마스크 착용 검출 YOLOv5 모델 구현 (추론 60ms, F1-score 0.98)</p>
             </div>
             <span>교내 활동</span>
           </article>
@@ -764,7 +777,7 @@
             <time>2022</time>
             <div>
               <h3>창업동아리 HIVE 27기 회장</h3>
-              <p>홍익대학교 창업동아리</p>
+              <p>홍익대학교 벤처창업동아리</p>
             </div>
             <span>교내 활동</span>
           </article>
@@ -819,10 +832,10 @@
         </div>
       </section>
 
-      <!-- 07. 취미 ====================================================== -->
+      <!-- 06. 취미 ====================================================== -->
       <section id="hobby" class="hobby section-shell reveal">
         <div class="section-heading">
-          <p class="section-label">07</p>
+          <p class="section-label">06</p>
           <h2>취미</h2>
           <p class="section-sub">Travel · 16개 국가</p>
         </div>
@@ -836,7 +849,7 @@
 
     <footer id="contact" class="footer">
       <div class="section-shell">
-        <p class="section-label">08</p>
+        <p class="section-label">07</p>
         <h2>연락처</h2>
         <a class="email" href="mailto:joon5159@naver.com">joon5159@naver.com <span>↗</span></a>
         <div class="footer-bottom">

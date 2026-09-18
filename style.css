@@ -282,16 +282,13 @@ h2 {
 .side-column  { grid-area: side; }
 .stack-panel  { grid-area: stack; }
 
-.id-column {
-  display: grid;
-  gap: 14px;
-}
-
-/* 학술논문 칸과 오른쪽 열은 옆 칸 높이에 맞춰 늘려 아래 끝선을 맞춘다 */
+/* 모든 칸을 옆 칸 높이에 맞춰 늘려 아래 끝선을 맞춘다.
+   열(column) 안에서는 마지막 패널이 남는 높이를 가져간다 */
 .papers-panel {
   align-self: stretch;
 }
 
+.id-column,
 .side-column {
   display: flex;
   flex-direction: column;
@@ -299,6 +296,7 @@ h2 {
   align-self: stretch;
 }
 
+.id-column > :last-child,
 .side-column > :last-child {
   flex: 1;
 }
@@ -372,10 +370,25 @@ h2 {
   font-weight: 600;
 }
 
-.lab-prof {
-  margin: 0;
-  color: var(--muted);
+.lab-profs {
+  margin: 8px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.lab-profs li {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  padding: 2px 0;
+  color: var(--dim);
   font-size: .8rem;
+}
+
+.lab-profs span {
+  min-width: 70px;
+  color: var(--blue-soft);
+  font: 500 .6rem var(--mono);
 }
 
 /* --- 학력 · 자격 공통 목록 (왼쪽 구분 태그 + 내용) --- */
@@ -650,12 +663,46 @@ a.info-row:focus-visible p::after {
   letter-spacing: .03em;
 }
 
-.record-body p:not(.venue) {
+.record-body p:not(.venue):not(.role-label) {
   max-width: 70ch;
   margin: 0 0 10px;
   color: var(--dim);
   font-size: .89rem;
   line-height: 1.8;
+}
+
+/* 수행 역할 · 내용 목록 */
+.role-label {
+  margin: 0 0 8px;
+  color: var(--muted);
+  font: 500 .6rem var(--mono);
+  letter-spacing: .12em;
+}
+
+.role-list {
+  max-width: 70ch;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.role-list li {
+  position: relative;
+  margin-bottom: 6px;
+  padding-left: 16px;
+  color: var(--dim);
+  font-size: .89rem;
+  line-height: 1.7;
+}
+
+.role-list li::before {
+  content: '';
+  position: absolute;
+  top: .85em;
+  left: 2px;
+  width: 6px;
+  height: 1px;
+  background: var(--blue-soft);
 }
 
 .record-link {
@@ -720,6 +767,14 @@ a.info-row:focus-visible p::after {
   margin: 0;
   color: var(--muted);
   font-size: .84rem;
+}
+
+/* 교육 과정 프로젝트 · 연구 성과 같은 보충 설명 줄 */
+.timeline .timeline-detail {
+  margin-top: 5px;
+  color: #6d7689;
+  font-size: .78rem;
+  line-height: 1.6;
 }
 
 .timeline > article > span {
