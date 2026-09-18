@@ -106,7 +106,9 @@
       if (f.id === '010') continue; // 남극 제외
       const d = path(f);
       if (!d) continue;
-      land.appendChild(el('path', { d, class: VISITED.has(f.id) ? 'visited' : '' }));
+      // fill 속성은 CSS가 늦게 오거나 예전 CSS가 캐시돼 있을 때를 위한 기본값 (CSS가 있으면 CSS가 우선)
+      const visited = VISITED.has(f.id);
+      land.appendChild(el('path', { d, class: visited ? 'visited' : '', fill: visited ? '#052a63' : '#111826' }));
     }
     svg.appendChild(land);
 
@@ -160,14 +162,14 @@
         'data-trip': p.t.id,
       });
       const bubble = el('g', { class: 'travel-bubble' });
-      bubble.appendChild(el('circle', { r: R, class: 'travel-bubble-bg' }));
+      bubble.appendChild(el('circle', { r: R, class: 'travel-bubble-bg', fill: '#02132f' }));
       bubble.appendChild(el('image', {
         href: `assets/travel/${p.t.photo}.jpg`,
         x: -R, y: -R, width: R * 2, height: R * 2,
         preserveAspectRatio: 'xMidYMid slice',
         'clip-path': 'url(#travel-pin-clip)',
       }));
-      bubble.appendChild(el('circle', { r: R, class: 'travel-bubble-ring' }));
+      bubble.appendChild(el('circle', { r: R, class: 'travel-bubble-ring', fill: 'none', stroke: '#1746c4', 'stroke-width': 2 }));
       g.appendChild(bubble);
       layer.appendChild(g);
     }

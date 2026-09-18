@@ -733,6 +733,10 @@ a.info-row:focus-visible p::after {
 
 /* 10. 취미 ================================================================ */
 
+.hobby .section-sub {
+  font-size: .92rem;
+}
+
 .travel-map {
   position: relative;
   border: 1px solid var(--line);
