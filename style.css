@@ -5,7 +5,8 @@
    1. 디자인 토큰      2. 기본 스타일      3. 레이아웃
    4. 타이포그래피     5. 공통 패널·뱃지   6. 헤더
    7. 연구 프로필      8. 기록 리스트      9. 타임라인
-   10. 푸터            11. 등장 애니메이션 12. 반응형
+   10. 취미            11. 푸터            12. 등장 애니메이션
+   13. 반응형
    ========================================================================== */
 
 
@@ -231,6 +232,11 @@ h2 {
   color: var(--blue-soft);
 }
 
+.header-links {
+  display: flex;
+  gap: 16px;
+}
+
 .header-link {
   padding-left: 22px;
   border-left: 1px solid var(--line);
@@ -381,11 +387,16 @@ h2 {
 }
 
 .info-list li {
+  padding: 10px 0;
+  border-top: 1px solid var(--line);
+}
+
+.info-row {
   display: grid;
   grid-template-columns: 58px 1fr;
   gap: 12px;
-  padding: 10px 0;
-  border-top: 1px solid var(--line);
+  color: inherit;
+  text-decoration: none;
 }
 
 .info-list li:first-child {
@@ -475,6 +486,40 @@ h2 {
   color: var(--muted);
   font: .6rem var(--mono);
   letter-spacing: .03em;
+}
+
+/* 누르면 아래 상세 설명으로 이동하는 항목 */
+.mini-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.mini-link p,
+a.info-row p {
+  transition: color .15s;
+}
+
+.mini-link:hover p,
+.mini-link:focus-visible p,
+a.info-row:hover p,
+a.info-row:focus-visible p {
+  color: var(--blue-soft);
+}
+
+.mini-link p::after,
+a.info-row p::after {
+  content: " →";
+  color: var(--blue-soft);
+  opacity: 0;
+  transition: opacity .15s;
+}
+
+.mini-link:hover p::after,
+.mini-link:focus-visible p::after,
+a.info-row:hover p::after,
+a.info-row:focus-visible p::after {
+  opacity: 1;
 }
 
 /* --- Tech Stack (상 · 중 · 하) --- */
@@ -626,6 +671,24 @@ h2 {
 }
 
 
+/* --- 연구 프로필에서 눌러 이동해 온 항목 --- */
+
+.record,
+.timeline article {
+  scroll-margin-top: 90px;
+}
+
+.record:target,
+.timeline article:target {
+  animation: target-flash 1.8s ease-out;
+}
+
+@keyframes target-flash {
+  0%   { background: rgba(23, 70, 196, .28); }
+  100% { background: transparent; }
+}
+
+
 /* 9. 타임라인 ============================================================ */
 
 .timeline {
@@ -668,7 +731,108 @@ h2 {
 }
 
 
-/* 10. 푸터 ================================================================ */
+/* 10. 취미 ================================================================ */
+
+.travel-map {
+  position: relative;
+  border: 1px solid var(--line);
+  background: radial-gradient(ellipse at 50% 40%, #07101f, var(--bg) 75%);
+}
+
+.travel-map svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.travel-map-status {
+  margin: 0;
+  padding: 80px 20px;
+  color: var(--muted);
+  font: .72rem var(--mono);
+  text-align: center;
+}
+
+.travel-land path {
+  fill: #111826;
+  stroke: #1d2638;
+  stroke-width: .6;
+}
+
+.travel-land path.visited {
+  fill: var(--navy);
+  stroke: var(--blue-line);
+}
+
+.travel-stems line {
+  stroke: var(--blue-soft);
+  stroke-width: 1;
+  opacity: .55;
+}
+
+.travel-dot {
+  fill: var(--blue-soft);
+}
+
+/* 사진 핀 */
+.travel-pin {
+  cursor: default;
+  outline: none;
+}
+
+.travel-bubble {
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: transform .18s ease;
+}
+
+.travel-pin:hover .travel-bubble,
+.travel-pin:focus-visible .travel-bubble {
+  transform: scale(1.45);
+}
+
+.travel-bubble-bg {
+  fill: var(--navy-deep);
+}
+
+.travel-bubble-ring {
+  fill: none;
+  stroke: var(--blue);
+  stroke-width: 2;
+}
+
+.travel-pin:hover .travel-bubble-ring,
+.travel-pin:focus-visible .travel-bubble-ring {
+  stroke: var(--blue-soft);
+}
+
+/* 핀 아래에 뜨는 방문 시기 */
+.travel-tip {
+  position: absolute;
+  z-index: 2;
+  transform: translateX(-50%);
+  padding: 7px 11px;
+  border: 1px solid var(--blue-line);
+  background: rgba(2, 19, 47, .95);
+  pointer-events: none;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.travel-tip strong {
+  display: block;
+  font-size: .78rem;
+  font-weight: 600;
+}
+
+.travel-tip span {
+  color: var(--blue-soft);
+  font: .64rem var(--mono);
+}
+
+
+
+/* 11. 푸터 ================================================================ */
 
 .footer {
   padding: 80px 0 28px;
@@ -708,7 +872,7 @@ h2 {
 }
 
 
-/* 11. 등장 애니메이션 ===================================================== */
+/* 12. 등장 애니메이션 ===================================================== */
 
 .reveal {
   opacity: 0;
@@ -734,7 +898,7 @@ h2 {
 }
 
 
-/* 12. 반응형 ============================================================== */
+/* 13. 반응형 ============================================================== */
 
 @media (max-width: 1080px) {
   .profile-grid {
@@ -750,6 +914,15 @@ h2 {
 }
 
 @media (max-width: 800px) {
+  /* 좁은 화면에서는 지도를 줄이지 않고 가로로 스크롤한다 (핀이 너무 작아지지 않도록) */
+  .travel-map {
+    overflow-x: auto;
+  }
+
+  .travel-map svg {
+    min-width: 760px;
+  }
+
   .section-shell {
     width: calc(100% - 40px);
   }
@@ -822,6 +995,15 @@ h2 {
 @media (max-width: 480px) {
   .section-shell {
     width: calc(100% - 32px);
+  }
+
+  .header-links {
+    gap: 10px;
+  }
+
+  .header-link {
+    padding-left: 10px;
+    font-size: .62rem;
   }
 
   .id-card {
