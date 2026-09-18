@@ -36,7 +36,7 @@
         </div>
 
         <div class="profile-grid">
-          <!-- 좌측: 신원 카드 -->
+          <!-- 좌측 상단: 신원 · 연구실 · 학력 · 자격 -->
           <div class="id-column">
             <div class="id-card">
               <div class="id-photo-frame">
@@ -65,23 +65,23 @@
 
             <div class="panel edu-panel">
               <p class="panel-label">학력</p>
-              <ul class="edu-list">
+              <ul class="info-list">
                 <li>
-                  <span class="edu-level">대학원</span>
+                  <span class="info-tag">대학원</span>
                   <div>
                     <p>홍익대학교 전자전기공학과 석사과정</p>
                     <time>2025.03 — 2027.02 (졸업예정)</time>
                   </div>
                 </li>
                 <li>
-                  <span class="edu-level">학부</span>
+                  <span class="info-tag">학부</span>
                   <div>
                     <p>홍익대학교 전자전기공학부 학사</p>
                     <time>2018.03 — 2025.02</time>
                   </div>
                 </li>
                 <li>
-                  <span class="edu-level">고등학교</span>
+                  <span class="info-tag">고등학교</span>
                   <div>
                     <p>이매고등학교</p>
                     <time>2015.03 — 2018.02</time>
@@ -92,104 +92,146 @@
 
             <div class="panel cert-panel">
               <p class="panel-label">자격 · 어학</p>
-              <ul class="cert-list">
-                <li><span>정보처리기사</span><time>2026.06</time></li>
-                <li><span>빅데이터분석기사</span><time>2024.07</time></li>
-                <li><span>OPIc (영어) Intermediate High</span><time>2026.07</time></li>
+              <ul class="info-list">
+                <li>
+                  <span class="info-tag">자격</span>
+                  <div>
+                    <p>정보처리기사</p>
+                    <time>2026.06</time>
+                  </div>
+                </li>
+                <li>
+                  <span class="info-tag">자격</span>
+                  <div>
+                    <p>빅데이터분석기사</p>
+                    <time>2024.07</time>
+                  </div>
+                </li>
+                <li>
+                  <span class="info-tag">어학</span>
+                  <div>
+                    <p>OPIc (영어) Intermediate High</p>
+                    <time>2026.07</time>
+                  </div>
+                </li>
               </ul>
             </div>
           </div>
 
-          <!-- 우측: 연구 요약 -->
-          <div class="summary-column">
-            <div class="focus-box">
-              <p class="panel-label">Research Focus</p>
-              <p class="focus-tag">투고 예정</p>
-              <h3>임베디드 환경에서의 작업장·작업자 이상탐지 및 예측과 자율대응조치를 위한 통합 시스템 개발</h3>
+          <!-- 연구 주제 -->
+          <div class="focus-box">
+            <p class="panel-label">Research Focus</p>
+            <p class="focus-tag">투고 예정</p>
+            <h3>임베디드 환경에서의 작업장·작업자 이상탐지 및 예측과 자율대응조치를 위한 통합 시스템 개발</h3>
+          </div>
+
+          <!-- 학술논문 -->
+          <div class="panel list-panel papers-panel">
+            <p class="panel-label">연구실적 · 학술논문 <b>5편</b></p>
+            <ul class="mini-list">
+              <li>
+                <span class="badge first">학술대회 1저자</span>
+                <p>산업안전 모니터링을 위한 MobileCLIP-CoOp 모델의 Edge AI 적용에 관한 연구</p>
+                <small>한국전기전자학회 하계학술대회 · 2026.08</small>
+              </li>
+              <li>
+                <span class="badge first">학술대회 1저자</span>
+                <p>임베디드 시스템 환경에서의 CCTV 기반 실시간 작업자 안전 모니터링 알고리즘에 관한 연구</p>
+                <small>한국지능시스템학회 추계학술대회 · 2025.11</small>
+              </li>
+              <li>
+                <span class="badge journal">국내학술지 2저자</span>
+                <p>임베디드 환경에서 딥러닝 기반 전염병 확산 방지 시스템</p>
+                <small>스마트미디어저널 Vol.15 No.3 · 2026.03</small>
+              </li>
+              <li>
+                <span class="badge">학술대회 2저자</span>
+                <p>열화상 기반 실시간 산업현장 위험 모니터링에 관한 연구</p>
+                <small>한국지능시스템학회 추계학술대회 · 2025.11</small>
+              </li>
+              <li>
+                <span class="badge">학술대회 2저자</span>
+                <p>제한된 길이의 음향 신호 분석을 통한 실시간 오디오 모니터링에 관한 연구</p>
+                <small>한국전기전자학회 하계학술대회 · 2026.08</small>
+              </li>
+            </ul>
+          </div>
+
+          <!-- 우측: 연구과제 · 개인 프로젝트 -->
+          <div class="side-column">
+            <div class="panel list-panel">
+              <p class="panel-label">연구과제 참여 <b>4건 · 국가 R&amp;D</b></p>
+              <ul class="mini-list grant">
+                <li>
+                  <p>이사 총괄 플래너 서비스 AI 솔루션 개발</p>
+                  <small>중소기업기술정보진흥원 · 2026.04 — 2027.09</small>
+                </li>
+                <li>
+                  <p>복합 AIoT 기반 산업현장 작업자 안전 모니터링 시스템 개발</p>
+                  <small>중소기업기술정보진흥원 · 2024.07 — 2026.12</small>
+                </li>
+                <li>
+                  <p>다중 센서 기반 작업장 환경위험 탐지 및 대응 기술 개발</p>
+                  <small>중소기업기술정보진흥원 · 2024.07 — 2026.12</small>
+                </li>
+                <li>
+                  <p>배전반/분전반 등 전기설비 발생 전기사고의 지능형 사전 예측 및 안전 모니터링 시스템 개발</p>
+                  <small>한국산업기술기획평가원 · 2025.03 — 2026.05</small>
+                </li>
+              </ul>
             </div>
 
-            <div class="summary-split">
-              <div class="panel list-panel">
-                <p class="panel-label">연구실적 · 학술논문 <b>5편</b></p>
-                <ul class="mini-list">
-                  <li>
-                    <span class="badge first">학술대회 1저자</span>
-                    <p>산업안전 모니터링을 위한 MobileCLIP-CoOp 모델의 Edge AI 적용에 관한 연구</p>
-                    <small>한국전기전자학회 하계학술대회 · 2026.08</small>
-                  </li>
-                  <li>
-                    <span class="badge first">학술대회 1저자</span>
-                    <p>임베디드 시스템 환경에서의 CCTV 기반 실시간 작업자 안전 모니터링 알고리즘에 관한 연구</p>
-                    <small>한국지능시스템학회 추계학술대회 · 2025.11</small>
-                  </li>
-                  <li>
-                    <span class="badge journal">국내학술지 2저자</span>
-                    <p>임베디드 환경에서 딥러닝 기반 전염병 확산 방지 시스템</p>
-                    <small>스마트미디어저널 Vol.15 No.3 · 2026.03</small>
-                  </li>
-                  <li>
-                    <span class="badge">학술대회 2저자</span>
-                    <p>열화상 기반 실시간 산업현장 위험 모니터링에 관한 연구</p>
-                    <small>한국지능시스템학회 추계학술대회 · 2025.11</small>
-                  </li>
-                  <li>
-                    <span class="badge">학술대회 2저자</span>
-                    <p>제한된 길이의 음향 신호 분석을 통한 실시간 오디오 모니터링에 관한 연구</p>
-                    <small>한국전기전자학회 하계학술대회 · 2026.08</small>
-                  </li>
-                </ul>
-              </div>
-
-              <div class="panel list-panel">
-                <p class="panel-label">연구과제 참여 <b>4건 · 국가 R&amp;D</b></p>
-                <ul class="mini-list grant">
-                  <li>
-                    <p>이사 총괄 플래너 서비스 AI 솔루션 개발</p>
-                    <small>중소기업기술정보진흥원 · 2026.04 — 2027.09</small>
-                  </li>
-                  <li>
-                    <p>복합 AIoT 기반 산업현장 작업자 안전 모니터링 시스템 개발</p>
-                    <small>중소기업기술정보진흥원 · 2024.07 — 2026.12</small>
-                  </li>
-                  <li>
-                    <p>다중 센서 기반 작업장 환경위험 탐지 및 대응 기술 개발</p>
-                    <small>중소기업기술정보진흥원 · 2024.07 — 2026.12</small>
-                  </li>
-                  <li>
-                    <p>배전반/분전반 등 전기설비 발생 전기사고의 지능형 사전 예측 및 안전 모니터링 시스템 개발</p>
-                    <small>한국산업기술기획평가원 · 2025.03 — 2026.05</small>
-                  </li>
-                </ul>
-              </div>
+            <div class="panel list-panel">
+              <p class="panel-label">개인 프로젝트 <b>4건</b></p>
+              <ul class="mini-list grant">
+                <li>
+                  <p>ResumeAssistant — 로컬 RAG 기반 자기소개서 작성 도우미</p>
+                  <small>FastAPI · OpenAI · Chroma · 2026.09</small>
+                </li>
+                <li>
+                  <p>AInstagram — AI 카드뉴스 자동 발행 파이프라인</p>
+                  <small>GitHub Actions · Cloudflare R2 · 2026.08</small>
+                </li>
+                <li>
+                  <p>Daily Briefing — 개인화 AI 데일리 브리핑 이메일</p>
+                  <small>Next.js · PostgreSQL · Vercel · 2026.07</small>
+                </li>
+                <li>
+                  <span class="badge team">팀 프로젝트</span>
+                  <p>코스피 7000간다 — 주식 시장 RAG 일일 증시 보고서</p>
+                  <small>LlamaIndex · HyperCLOVA X · 2025.07</small>
+                </li>
+              </ul>
             </div>
+          </div>
 
-            <div class="panel stack-panel">
-              <p class="panel-label">Tech Stack</p>
-              <div class="stack-tier high">
-                <span class="tier-mark">상</span>
-                <ul class="chip-row">
-                  <li>Python / PyTorch / TensorFlow</li>
-                  <li>OpenCV</li>
-                  <li>Git</li>
-                  <li>VSCode</li>
-                </ul>
-              </div>
-              <div class="stack-tier mid">
-                <span class="tier-mark">중</span>
-                <ul class="chip-row">
-                  <li>C/C++</li>
-                  <li>Linux</li>
-                  <li>Jetson Board</li>
-                  <li>ONNX / TensorRT</li>
-                  <li>W&amp;B</li>
-                </ul>
-              </div>
-              <div class="stack-tier low">
-                <span class="tier-mark">하</span>
-                <ul class="chip-row">
-                  <li>Docker / WSL2</li>
-                </ul>
-              </div>
+          <!-- 좌측 하단: 기술 스택 -->
+          <div class="panel stack-panel">
+            <p class="panel-label">Tech Stack</p>
+            <div class="stack-tier high">
+              <span class="tier-mark">상</span>
+              <ul class="chip-row">
+                <li>Python / PyTorch / TensorFlow</li>
+                <li>OpenCV</li>
+                <li>Git</li>
+                <li>VSCode</li>
+              </ul>
+            </div>
+            <div class="stack-tier mid">
+              <span class="tier-mark">중</span>
+              <ul class="chip-row">
+                <li>C/C++</li>
+                <li>Linux</li>
+                <li>Jetson Board</li>
+                <li>ONNX / TensorRT</li>
+                <li>W&amp;B</li>
+              </ul>
+            </div>
+            <div class="stack-tier low">
+              <span class="tier-mark">하</span>
+              <ul class="chip-row">
+                <li>Docker / WSL2</li>
+              </ul>
             </div>
           </div>
         </div>

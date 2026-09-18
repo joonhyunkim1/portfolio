@@ -246,17 +246,55 @@ h2 {
   padding-top: 70px;
 }
 
+/*
+  배치
+  ┌──────────┬──────────────────────┐
+  │ 신원 카드 │ 연구 주제             │
+  │ 연구실    ├───────────┬──────────┤
+  │ 학력      │ 학술논문   │ 연구과제  │
+  │ 자격·어학 │           │ 개인 PJT │
+  ├──────────┴───────────┤          │
+  │ 기술 스택             │          │
+  └──────────────────────┴──────────┘
+*/
 .profile-grid {
   display: grid;
-  grid-template-columns: 330px 1fr;
+  grid-template-columns: 330px 1.2fr 1fr;
+  /* 왼쪽 열의 남는 높이는 가운데 줄(1fr)이 받아, 연구 주제 아래에 틈이 생기지 않게 한다 */
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "id    focus  focus"
+    "id    papers side"
+    "stack stack  side";
   align-items: start;
-  gap: 22px;
+  gap: 14px 22px;
 }
 
-.id-column,
-.summary-column {
+.id-column    { grid-area: id; }
+.focus-box    { grid-area: focus; }
+.papers-panel { grid-area: papers; }
+.side-column  { grid-area: side; }
+.stack-panel  { grid-area: stack; }
+
+.id-column {
   display: grid;
   gap: 14px;
+}
+
+/* 학술논문 칸과 오른쪽 열은 옆 칸 높이에 맞춰 늘려 아래 끝선을 맞춘다 */
+.papers-panel {
+  align-self: stretch;
+}
+
+.side-column {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-self: stretch;
+}
+
+.side-column > :last-child {
+  flex: 1;
 }
 
 /* --- 신원 카드 --- */
@@ -334,15 +372,15 @@ h2 {
   font-size: .8rem;
 }
 
-/* --- 학력 --- */
+/* --- 학력 · 자격 공통 목록 (왼쪽 구분 태그 + 내용) --- */
 
-.edu-list {
+.info-list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.edu-list li {
+.info-list li {
   display: grid;
   grid-template-columns: 58px 1fr;
   gap: 12px;
@@ -350,55 +388,26 @@ h2 {
   border-top: 1px solid var(--line);
 }
 
-.edu-list li:first-child {
+.info-list li:first-child {
   border-top: 0;
   padding-top: 0;
 }
 
-.edu-level {
+.info-tag {
   color: var(--blue-soft);
   font: 500 .64rem var(--mono);
   line-height: 1.9;
 }
 
-.edu-list p {
+.info-list p {
   margin: 0 0 2px;
   font-size: .82rem;
   line-height: 1.5;
 }
 
-.edu-list time {
+.info-list time {
   color: var(--muted);
   font: .6rem var(--mono);
-}
-
-/* --- 자격·어학 --- */
-
-.cert-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.cert-list li {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 9px 0;
-  border-top: 1px solid var(--line);
-  font-size: .82rem;
-}
-
-.cert-list li:first-child {
-  border-top: 0;
-  padding-top: 0;
-}
-
-.cert-list time {
-  color: var(--muted);
-  font: .62rem var(--mono);
-  white-space: nowrap;
 }
 
 /* --- 연구 주제 --- */
@@ -428,14 +437,7 @@ h2 {
   letter-spacing: -.035em;
 }
 
-/* --- 요약 리스트 2열 --- */
-
-.summary-split {
-  display: grid;
-  grid-template-columns: 1.25fr 1fr;
-  align-items: start;
-  gap: 14px;
-}
+/* --- 요약 리스트 (논문 · 과제 · 프로젝트) --- */
 
 .mini-list {
   margin: 0;
@@ -462,6 +464,11 @@ h2 {
 
 .mini-list.grant p {
   margin-top: 0;
+}
+
+/* 뱃지가 붙은 항목은 제목과 간격을 둔다 */
+.mini-list .badge + p {
+  margin-top: 7px;
 }
 
 .mini-list small {
@@ -732,10 +739,13 @@ h2 {
 @media (max-width: 1080px) {
   .profile-grid {
     grid-template-columns: 1fr;
-  }
-
-  .summary-split {
-    grid-template-columns: 1fr;
+    grid-template-rows: none;
+    grid-template-areas:
+      "id"
+      "focus"
+      "papers"
+      "side"
+      "stack";
   }
 }
 
