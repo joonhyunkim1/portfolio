@@ -4,9 +4,8 @@
 
    1. 디자인 토큰      2. 기본 스타일      3. 레이아웃
    4. 타이포그래피     5. 공통 패널·뱃지   6. 헤더
-   7. 연구 프로필      8. 지표             9. 기록 리스트
-   10. 타임라인        11. 기술 스택       12. 푸터
-   13. 등장 애니메이션 14. 반응형
+   7. 연구 프로필      8. 기록 리스트      9. 타임라인
+   10. 푸터            11. 등장 애니메이션 12. 반응형
    ========================================================================== */
 
 
@@ -317,47 +316,54 @@ h2 {
 
 /* --- 연구실 --- */
 
-.lab-prof {
+.lab-name {
   margin: 0 0 3px;
   font-size: 1rem;
   font-weight: 600;
 }
 
-.lab-name {
+.lab-prof {
   margin: 0;
   color: var(--muted);
   font-size: .8rem;
 }
 
-/* --- GPA --- */
+/* --- 학력 --- */
 
-.gpa-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14px;
-}
-
-.gpa {
-  text-align: center;
-}
-
-.gpa .panel-label {
-  margin-bottom: 8px;
-}
-
-.gpa-value {
+.edu-list {
   margin: 0;
-  font: 500 1.5rem var(--mono);
-  letter-spacing: -.05em;
+  padding: 0;
+  list-style: none;
 }
 
-.gpa-value span {
-  color: var(--muted);
-  font-size: .9rem;
+.edu-list li {
+  display: grid;
+  grid-template-columns: 58px 1fr;
+  gap: 12px;
+  padding: 10px 0;
+  border-top: 1px solid var(--line);
 }
 
-.gpa-value.accent {
+.edu-list li:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.edu-level {
   color: var(--blue-soft);
+  font: 500 .64rem var(--mono);
+  line-height: 1.9;
+}
+
+.edu-list p {
+  margin: 0 0 2px;
+  font-size: .82rem;
+  line-height: 1.5;
+}
+
+.edu-list time {
+  color: var(--muted);
+  font: .6rem var(--mono);
 }
 
 /* --- 자격·어학 --- */
@@ -458,67 +464,70 @@ h2 {
   letter-spacing: .03em;
 }
 
-/* --- Core Stack --- */
+/* --- Tech Stack (상 · 중 · 하) --- */
+
+.stack-tier {
+  display: grid;
+  grid-template-columns: 32px 1fr;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+  border-top: 1px solid var(--line);
+}
+
+.stack-panel .panel-label + .stack-tier {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.tier-mark {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--line-strong);
+  color: var(--muted);
+  font: 600 .85rem var(--sans);
+}
+
+/* 숙련도에 따라 파랑 농도를 달리한다 */
+.stack-tier.high .tier-mark {
+  border-color: var(--blue);
+  background: var(--blue);
+  color: #fff;
+}
+
+.stack-tier.mid .tier-mark {
+  border-color: var(--blue-line);
+  background: var(--navy);
+  color: #c3d5ff;
+}
 
 .chip-row {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
 .chip-row li {
-  padding: 10px 12px;
+  padding: 6px 10px;
   border: 1px solid var(--line);
   background: var(--soft);
   color: var(--dim);
   font: .68rem var(--mono);
-  text-align: center;
 }
 
-
-/* 8. 지표 ================================================================= */
-
-.metrics {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  margin-top: 22px;
-  border: 1px solid var(--blue-line);
+.stack-tier.high .chip-row li {
+  border-color: var(--blue-line);
   background: var(--navy-deep);
-}
-
-.metrics article {
-  padding: 22px 20px;
-  border-left: 1px solid var(--blue-line);
-}
-
-.metrics article:first-child {
-  border-left: 0;
-}
-
-.metric-number {
-  margin: 0 0 6px;
-  color: var(--blue-soft);
-  font: 500 2.1rem var(--mono);
-  line-height: 1;
-  letter-spacing: -.06em;
-}
-
-.metric-number span {
-  font-size: 1.05rem;
-  letter-spacing: 0;
-}
-
-.metrics article > p:not(.metric-number) {
-  margin: 0;
-  color: var(--muted);
-  font-size: .74rem;
+  color: #d3e0ff;
 }
 
 
-/* 9. 기록 리스트 (논문 · 과제 · 프로젝트) ================================= */
+/* 8. 기록 리스트 (논문 · 과제 · 프로젝트) ================================= */
 
 .record-list {
   margin: 0;
@@ -584,8 +593,20 @@ h2 {
   line-height: 1.8;
 }
 
+.record-link {
+  display: inline-block;
+  margin-top: 16px;
+  color: var(--blue-soft);
+  font: 500 .7rem var(--mono);
+  text-decoration: none;
+}
 
-/* 10. 타임라인 ============================================================ */
+.record-link:hover {
+  text-decoration: underline;
+}
+
+
+/* 9. 타임라인 ============================================================ */
 
 .timeline {
   border-top: 1px solid var(--line);
@@ -627,89 +648,7 @@ h2 {
 }
 
 
-/* 11. 기술 스택 =========================================================== */
-
-.stack-levels {
-  display: grid;
-  gap: 14px;
-}
-
-.level-block {
-  display: grid;
-  grid-template-columns: 250px 1fr;
-  align-items: center;
-  gap: 24px;
-  padding: 22px;
-  border: 1px solid var(--line);
-  background: var(--panel);
-}
-
-.level-head {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-
-.level-mark {
-  display: grid;
-  place-items: center;
-  width: 42px;
-  height: 42px;
-  border: 1px solid var(--line-strong);
-  color: var(--muted);
-  font: 600 1.05rem var(--sans);
-}
-
-.level-head p {
-  margin: 0;
-  color: var(--muted);
-  font-size: .76rem;
-  line-height: 1.45;
-}
-
-.level-block ul {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 7px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.level-block li {
-  padding: 7px 12px;
-  border: 1px solid var(--line);
-  background: var(--soft);
-  color: var(--dim);
-  font: .74rem var(--mono);
-}
-
-/* 숙련도에 따라 파랑 농도를 달리한다 */
-.level-block.high {
-  border-color: var(--blue-line);
-  background: linear-gradient(100deg, var(--navy-deep), var(--panel) 65%);
-}
-
-.level-block.high .level-mark {
-  border-color: var(--blue);
-  background: var(--blue);
-  color: #fff;
-}
-
-.level-block.high li {
-  border-color: var(--blue-line);
-  background: var(--navy-deep);
-  color: #d3e0ff;
-}
-
-.level-block.mid .level-mark {
-  border-color: var(--blue-line);
-  background: var(--navy);
-  color: #c3d5ff;
-}
-
-
-/* 12. 푸터 ================================================================ */
+/* 10. 푸터 ================================================================ */
 
 .footer {
   padding: 80px 0 28px;
@@ -749,7 +688,7 @@ h2 {
 }
 
 
-/* 13. 등장 애니메이션 ===================================================== */
+/* 11. 등장 애니메이션 ===================================================== */
 
 .reveal {
   opacity: 0;
@@ -775,7 +714,7 @@ h2 {
 }
 
 
-/* 14. 반응형 ============================================================== */
+/* 12. 반응형 ============================================================== */
 
 @media (max-width: 1080px) {
   .profile-grid {
@@ -784,18 +723,6 @@ h2 {
 
   .summary-split {
     grid-template-columns: 1fr;
-  }
-
-  .metrics {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .metrics article:nth-child(3) {
-    border-left: 0;
-  }
-
-  .metrics article:nth-child(n + 3) {
-    border-top: 1px solid var(--blue-line);
   }
 }
 
@@ -830,10 +757,6 @@ h2 {
     gap: 14px;
   }
 
-  .chip-row {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
   .record {
     grid-template-columns: 1fr;
     gap: 16px;
@@ -857,11 +780,6 @@ h2 {
   .timeline > article > span {
     justify-self: start;
     margin-top: 4px;
-  }
-
-  .level-block {
-    grid-template-columns: 1fr;
-    gap: 16px;
   }
 
   .footer {
@@ -889,19 +807,5 @@ h2 {
 
   .id-photo-frame {
     max-width: 150px;
-  }
-
-  .gpa-row,
-  .metrics {
-    grid-template-columns: 1fr;
-  }
-
-  .metrics article {
-    border-left: 0;
-    border-top: 1px solid var(--blue-line);
-  }
-
-  .metrics article:first-child {
-    border-top: 0;
   }
 }

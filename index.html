@@ -20,8 +20,8 @@
         <a href="#papers">학술논문</a>
         <a href="#grants">연구과제</a>
         <a href="#projects">프로젝트</a>
+        <a href="#personal">개인 프로젝트</a>
         <a href="#activities">활동</a>
-        <a href="#stack">기술 스택</a>
       </nav>
       <a class="header-link" href="https://github.com/joonhyunkim1" target="_blank" rel="noreferrer">GitHub ↗</a>
     </header>
@@ -58,20 +58,38 @@
             </div>
 
             <div class="panel lab-panel">
-              <p class="panel-label">지도교수 · 연구실</p>
-              <p class="lab-prof">임종태 교수</p>
+              <p class="panel-label">연구실 · 지도교수</p>
               <p class="lab-name">지능정보처리연구실</p>
+              <p class="lab-prof">임종태 교수</p>
             </div>
 
-            <div class="gpa-row">
-              <div class="panel gpa">
-                <p class="panel-label">학부 GPA</p>
-                <p class="gpa-value">3.3<span> / 4.5</span></p>
-              </div>
-              <div class="panel gpa">
-                <p class="panel-label">대학원 GPA</p>
-                <p class="gpa-value accent">4.5<span> / 4.5</span></p>
-              </div>
+            <div class="panel edu-panel">
+              <p class="panel-label">학력</p>
+              <ul class="edu-list">
+                <li>
+                  <span class="edu-level">대학원</span>
+                  <div>
+                    <p>홍익대학교 전자전기공학과 석사과정</p>
+                    <time>2025.03 — 2027.02 (졸업예정)</time>
+                  </div>
+                </li>
+                <li>
+                  <span class="edu-level">학부</span>
+                  <div>
+                    <p>홍익대학교 전자전기공학부 학사</p>
+                    <time>2018.03 — 2025.02</time>
+                  </div>
+                </li>
+                <!-- 고등학교 — 학교명·졸업연도 확정되면 주석 해제
+                <li>
+                  <span class="edu-level">고등학교</span>
+                  <div>
+                    <p>OO고등학교</p>
+                    <time>졸업 연도</time>
+                  </div>
+                </li>
+                -->
+              </ul>
             </div>
 
             <div class="panel cert-panel">
@@ -125,53 +143,57 @@
               </div>
 
               <div class="panel list-panel">
-                <p class="panel-label">연구과제 참여 <b>3건 · 국가 R&amp;D</b></p>
+                <p class="panel-label">연구과제 참여 <b>4건</b></p>
                 <ul class="mini-list grant">
                   <li>
-                    <p>배전반·분전반 전기설비 사고 지능형 사전예측 및 안전 모니터링</p>
-                    <small>한국산업기술평가원 · 2025.03 — 2026.05</small>
+                    <p>이사 총괄 플래너 서비스 AI 솔루션 개발</p>
+                    <small>2026.04 — 2027.09</small>
+                  </li>
+                  <li>
+                    <p>복합 AIoT 기반 산업현장 작업자 안전 모니터링 시스템 개발</p>
+                    <small>중소기업기술정보진흥원 · 2024.07 — 2026.12</small>
                   </li>
                   <li>
                     <p>다중 센서 기반 작업장 환경위험 탐지 및 대응 기술 개발</p>
                     <small>중소기업기술정보진흥원 · 2024.07 — 2026.12</small>
                   </li>
                   <li>
-                    <p>복합 AIoT 기반 산업현장 작업자 안전 모니터링 시스템 개발</p>
-                    <small>중소기업기술정보진흥원 · 2024.07 — 2026.12</small>
+                    <p>배전반/분전반 등 전기설비 발생 전기사고의 지능형 사전 예측 및 안전 모니터링 시스템 개발</p>
+                    <small>한국산업기술평가원 · 2025.03 — 2026.05</small>
                   </li>
                 </ul>
               </div>
             </div>
 
             <div class="panel stack-panel">
-              <p class="panel-label">Core Stack</p>
-              <ul class="chip-row">
-                <li>Python · PyTorch</li>
-                <li>OpenCV · C/C++</li>
-                <li>Jetson Orin / Nano</li>
-                <li>TensorRT · ONNX</li>
-              </ul>
+              <p class="panel-label">Tech Stack</p>
+              <div class="stack-tier high">
+                <span class="tier-mark">상</span>
+                <ul class="chip-row">
+                  <li>Python / PyTorch / TensorFlow</li>
+                  <li>OpenCV</li>
+                  <li>Git</li>
+                  <li>VSCode</li>
+                </ul>
+              </div>
+              <div class="stack-tier mid">
+                <span class="tier-mark">중</span>
+                <ul class="chip-row">
+                  <li>C/C++</li>
+                  <li>Linux</li>
+                  <li>Jetson Board</li>
+                  <li>ONNX / TensorRT</li>
+                  <li>W&amp;B</li>
+                </ul>
+              </div>
+              <div class="stack-tier low">
+                <span class="tier-mark">하</span>
+                <ul class="chip-row">
+                  <li>Docker / WSL2</li>
+                </ul>
+              </div>
             </div>
           </div>
-        </div>
-
-        <div class="metrics">
-          <article>
-            <p class="metric-number">93.3<span>%</span></p>
-            <p>8-shot 분류 정확도</p>
-          </article>
-          <article>
-            <p class="metric-number">19.8<span>ms</span></p>
-            <p>Edge 추론 지연시간</p>
-          </article>
-          <article>
-            <p class="metric-number">4.8<span>×</span></p>
-            <p>추론 속도 향상</p>
-          </article>
-          <article>
-            <p class="metric-number">+22.0<span>%p</span></p>
-            <p>Zero-shot 대비 최대 개선</p>
-          </article>
         </div>
       </section>
 
@@ -312,35 +334,50 @@
         <div class="section-heading">
           <p class="section-label">03</p>
           <h2>참여 연구과제</h2>
-          <p class="section-sub">National R&amp;D Projects · 3건</p>
+          <p class="section-sub">Research Projects · 4건</p>
         </div>
 
         <ol class="record-list">
           <li class="record">
             <div class="record-meta">
               <span class="record-no">01</span>
-              <span class="badge grant-badge">국가 R&amp;D</span>
-              <time>2025.03 — 2026.05</time>
+              <span class="badge grant-badge">연구과제</span>
+              <time>2026.04 — 2027.09</time>
             </div>
             <div class="record-body">
-              <h3>배전반·분전반 전기설비 사고 지능형 사전예측 및 안전 모니터링</h3>
-              <p class="venue">한국산업기술평가원 · 참여연구원</p>
+              <h3>이사 총괄 플래너 서비스 AI 솔루션 개발</h3>
+              <p class="venue">참여 · 2026.04 — 2027.09</p>
               <p>
-                배전반과 분전반에서 발생하는 전기 설비 사고를 사고 이전 단계에서 감지하는 과제입니다.
-                전류·온도·음향 등 설비에서 수집되는 신호를 함께 분석해 이상 징후를 판별하고,
-                사고로 이어지기 전에 경고를 발생시키는 것을 목표로 했습니다.
+                이사 준비 과정 전반을 관리하는 플래너 서비스에 들어갈 AI 솔루션을 개발하는 과제입니다.
               </p>
-              <ul class="tags">
-                <li>전기설비 진단</li>
-                <li>시계열 예측</li>
-                <li>이상 탐지</li>
-              </ul>
             </div>
           </li>
 
           <li class="record">
             <div class="record-meta">
               <span class="record-no">02</span>
+              <span class="badge grant-badge">국가 R&amp;D</span>
+              <time>2024.07 — 2026.12</time>
+            </div>
+            <div class="record-body">
+              <h3>복합 AIoT 기반 산업현장 작업자 안전 모니터링 시스템 개발</h3>
+              <p class="venue">중소기업기술정보진흥원 · 참여연구원</p>
+              <p>
+                영상·음향·센서를 하나의 AIoT 플랫폼으로 묶어 작업자 안전을 관리하는 과제입니다.
+                데이터 수집부터 분석, 경고 발생, 구동기 제어, 서버 및 Web/App 연동까지
+                탐지-판단-대응의 전체 흐름을 구성하는 역할을 맡았습니다.
+              </p>
+              <ul class="tags">
+                <li>AIoT</li>
+                <li>Edge-Server 연동</li>
+                <li>구동기 제어</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="record">
+            <div class="record-meta">
+              <span class="record-no">03</span>
               <span class="badge grant-badge">국가 R&amp;D</span>
               <time>2024.07 — 2026.12</time>
             </div>
@@ -365,22 +402,22 @@
 
           <li class="record">
             <div class="record-meta">
-              <span class="record-no">03</span>
+              <span class="record-no">04</span>
               <span class="badge grant-badge">국가 R&amp;D</span>
-              <time>2024.07 — 2026.12</time>
+              <time>2025.03 — 2026.05</time>
             </div>
             <div class="record-body">
-              <h3>복합 AIoT 기반 산업현장 작업자 안전 모니터링 시스템 개발</h3>
-              <p class="venue">중소기업기술정보진흥원 · 참여연구원</p>
+              <h3>배전반/분전반 등 전기설비 발생 전기사고의 지능형 사전 예측 및 안전 모니터링 시스템 개발</h3>
+              <p class="venue">한국산업기술평가원 · 참여연구원</p>
               <p>
-                영상·음향·센서를 하나의 AIoT 플랫폼으로 묶어 작업자 안전을 관리하는 과제입니다.
-                데이터 수집부터 분석, 경고 발생, 구동기 제어, 서버 및 Web/App 연동까지
-                탐지-판단-대응의 전체 흐름을 구성하는 역할을 맡았습니다.
+                배전반과 분전반에서 발생하는 전기 사고를 사고 이전 단계에서 예측하는 과제입니다.
+                설비에서 수집되는 신호를 분석해 이상 징후를 판별하고,
+                사고로 이어지기 전에 경고를 발생시키는 모니터링 시스템을 목표로 했습니다.
               </p>
               <ul class="tags">
-                <li>AIoT</li>
-                <li>Edge-Server 연동</li>
-                <li>구동기 제어</li>
+                <li>전기설비 진단</li>
+                <li>사전 예측</li>
+                <li>이상 탐지</li>
               </ul>
             </div>
           </li>
@@ -484,38 +521,138 @@
         </ol>
       </section>
 
-      <!--
-        05. 개인 프로젝트 — 내용 확정되면 아래 주석을 풀고 채우세요.
-            같은 .record 구조를 그대로 사용하면 스타일이 맞습니다.
-
+      <!-- 05. 개인 프로젝트 ============================================= -->
       <section id="personal" class="personal section-shell reveal">
         <div class="section-heading">
           <p class="section-label">05</p>
           <h2>개인 프로젝트</h2>
-          <p class="section-sub">Personal Projects</p>
+          <p class="section-sub">Personal Projects · 4건</p>
         </div>
+
         <ol class="record-list">
           <li class="record">
             <div class="record-meta">
               <span class="record-no">01</span>
-              <span class="badge">분류</span>
-              <time>연도</time>
+              <span class="badge">LLM · RAG</span>
+              <time>2026.09</time>
             </div>
             <div class="record-body">
-              <h3>프로젝트 제목</h3>
-              <p class="venue">한 줄 요약</p>
-              <p>무엇을 왜 만들었는지, 어떤 방식으로 해결했는지.</p>
-              <ul class="tags"><li>기술</li></ul>
+              <h3>ResumeAssistant — 로컬 RAG 기반 자기소개서 작성 도우미</h3>
+              <p class="venue">FastAPI · OpenAI Responses API · Chroma · SQLite</p>
+              <p>
+                이력서·포트폴리오·노션 기록 같은 실제 경험 자료를 RAG로 검색해 근거로 삼고,
+                기업과 직무별로 자동 생성한 작성 지침을 적용해 자기소개서를 작성·첨삭하는 로컬 웹 애플리케이션입니다.
+              </p>
+              <p>
+                회사명·직무·채용공고를 입력하면 기업 분석과 전용 시스템 프롬프트 생성을 2단계로 호출합니다.
+                자료는 PDF·DOCX·노션 내보내기 ZIP·URL까지 받아 로컬 벡터 DB에 색인하고,
+                OpenAI로 보내기 전에 개인정보를 자동으로 마스킹합니다. 요청마다 API 비용을 추정해 표시하고,
+                초안이 글자수 제한을 벗어나면 한 번 더 자동 조정합니다.
+              </p>
+              <ul class="tags">
+                <li>Python</li>
+                <li>FastAPI</li>
+                <li>RAG</li>
+                <li>Chroma</li>
+                <li>Prompt Engineering</li>
+              </ul>
+              <a class="record-link" href="https://github.com/joonhyunkim1/ResumeAssistant" target="_blank" rel="noreferrer">GitHub ↗</a>
+            </div>
+          </li>
+
+          <li class="record">
+            <div class="record-meta">
+              <span class="record-no">02</span>
+              <span class="badge">Automation</span>
+              <time>2026.08</time>
+            </div>
+            <div class="record-body">
+              <h3>AInstagram — AI 카드뉴스 자동 발행 파이프라인</h3>
+              <p class="venue">GitHub Actions · Telegram Bot · Cloudflare R2 · Instagram Graph API</p>
+              <p>
+                AI 관련 소식과 지식을 카드뉴스로 만들어 인스타그램에 자동으로 게시하는 파이프라인입니다.
+                별도 서버 없이 GitHub Actions cron과 무료 티어 서비스만으로 동작하도록 설계했습니다.
+              </p>
+              <p>
+                매일 예비 게시물 3개를 생성해 Telegram으로 미리보기를 보내고, 채택된 주제만 5~7장 캐러셀 이미지로
+                만들어 Cloudflare R2에 올린 뒤 대기열에 넣습니다. 정해진 시각마다 대기열에서 하나씩 발행하며,
+                실행마다 초기화되는 Actions 환경의 한계는 SQLite 상태 파일을 저장소에 커밋하는 방식으로 해결했습니다.
+              </p>
+              <ul class="tags">
+                <li>Python</li>
+                <li>OpenAI API</li>
+                <li>GitHub Actions</li>
+                <li>Cloudflare Workers</li>
+                <li>SQLite</li>
+              </ul>
+              <a class="record-link" href="https://github.com/joonhyunkim1/AInstagram" target="_blank" rel="noreferrer">GitHub ↗</a>
+            </div>
+          </li>
+
+          <li class="record">
+            <div class="record-meta">
+              <span class="record-no">03</span>
+              <span class="badge">LLM · Web</span>
+              <time>2026.07</time>
+            </div>
+            <div class="record-body">
+              <h3>Daily Briefing — 개인화 AI 데일리 브리핑 이메일</h3>
+              <p class="venue">Next.js · TypeScript · PostgreSQL · Vercel Cron</p>
+              <p>
+                매일 아침 코딩테스트 문제, 전공지식, 예상 면접 질문, AI·임베디드 뉴스, 미국 증시 요약을
+                LLM으로 생성해 이메일과 PDF로 보내주는 개인용 서비스입니다.
+                전공지식은 기초·중급·심화 3단계로 난이도가 점진적으로 올라가도록 설계했습니다.
+              </p>
+              <p>
+                최근 발송 이력을 PostgreSQL에 기록해 문제·주제·질문이 겹치지 않게 하고,
+                특정 섹션 생성이 실패해도 나머지는 정상 발송되도록 구성했습니다.
+                GitHub Actions가 매일 발송 여부를 확인해 실패 시 알림을 보냅니다.
+              </p>
+              <ul class="tags">
+                <li>Next.js</li>
+                <li>TypeScript</li>
+                <li>Prisma</li>
+                <li>OpenAI API</li>
+                <li>Vercel</li>
+              </ul>
+              <a class="record-link" href="https://github.com/joonhyunkim1/PersonalDailyReport" target="_blank" rel="noreferrer">GitHub ↗</a>
+            </div>
+          </li>
+
+          <li class="record">
+            <div class="record-meta">
+              <span class="record-no">04</span>
+              <span class="badge">RAG</span>
+              <time>2025.07</time>
+            </div>
+            <div class="record-body">
+              <h3>주식 시장 RAG 기반 일일 증시 보고서 생성 시스템</h3>
+              <p class="venue">LlamaIndex · CLOVA Embedding · HyperCLOVA X (HCX-005)</p>
+              <p>
+                전일 KRX 거래 데이터와 최근 24시간 뉴스를 수집해 벡터 DB를 구성하고,
+                전일 시장 요약과 당일 주목 종목 분석을 담은 일일 증시 보고서를 생성하는 시스템입니다.
+              </p>
+              <p>
+                1차 벡터 DB에서 이슈 종목 후보 3개를 근거와 함께 도출한 뒤, 해당 종목의 거래 데이터와 뉴스를
+                다시 수집해 2차 벡터 DB를 만듭니다. 시장 전체 요약과 종목 심화 분석을 각각 생성하고
+                하나의 보고서로 결합하는 2단계 검색 구조로 설계했습니다.
+              </p>
+              <ul class="tags">
+                <li>Python</li>
+                <li>LlamaIndex</li>
+                <li>CLOVA Studio</li>
+                <li>RAG</li>
+              </ul>
+              <a class="record-link" href="https://github.com/joonhyunkim1/NaverMiraeAsset" target="_blank" rel="noreferrer">GitHub ↗</a>
             </div>
           </li>
         </ol>
       </section>
-      -->
 
-      <!-- 06. 활동 · 학력 =============================================== -->
+      <!-- 06. 활동 · 학력 =============================================== --> -->
       <section id="activities" class="activities section-shell reveal">
         <div class="section-heading">
-          <p class="section-label">05</p>
+          <p class="section-label">06</p>
           <h2>활동 · 학력</h2>
           <p class="section-sub">Experience &amp; Education</p>
         </div>
@@ -530,10 +667,10 @@
             <span>학력</span>
           </article>
           <article>
-            <time>2024.07 — 2026.12</time>
+            <time>2024.07 — 2027.09</time>
             <div>
-              <h3>국가 R&amp;D 과제 참여연구원</h3>
-              <p>산업현장 안전 모니터링 관련 과제 3건 참여 · 영상/센서 분석 및 시스템 통합 담당</p>
+              <h3>연구과제 참여연구원</h3>
+              <p>산업현장 안전 모니터링 국가 R&amp;D 3건 포함 과제 4건 참여 · 영상/센서 분석 및 시스템 통합 담당</p>
             </div>
             <span>연구</span>
           </article>
@@ -561,61 +698,6 @@
             </div>
             <span>학력</span>
           </article>
-        </div>
-      </section>
-
-      <!-- 07. 기술 스택 ================================================= -->
-      <section id="stack" class="stack section-shell reveal">
-        <div class="section-heading">
-          <p class="section-label">06</p>
-          <h2>기술 스택</h2>
-          <p class="section-sub">Technical Stack · 숙련도별 분류</p>
-        </div>
-
-        <div class="stack-levels">
-          <div class="level-block high">
-            <div class="level-head">
-              <span class="level-mark">상</span>
-              <p>연구·과제에서 주도적으로 사용한 기술</p>
-            </div>
-            <ul>
-              <li>Python</li>
-              <li>PyTorch</li>
-              <li>OpenCV</li>
-              <li>YOLO 계열</li>
-              <li>Jetson Orin / Nano</li>
-              <li>TensorRT · ONNX</li>
-              <li>Linux · Git</li>
-            </ul>
-          </div>
-
-          <div class="level-block mid">
-            <div class="level-head">
-              <span class="level-mark">중</span>
-              <p>프로젝트에 적용해 본 기술</p>
-            </div>
-            <ul>
-              <li>C / C++</li>
-              <li>TensorFlow</li>
-              <li>Docker</li>
-              <li>Arduino · RS485</li>
-              <li>LSTM · Kalman Filter</li>
-              <li>MFCC · 음향 분류</li>
-              <li>Grad-CAM</li>
-            </ul>
-          </div>
-
-          <div class="level-block low">
-            <div class="level-head">
-              <span class="level-mark">하</span>
-              <p>보조적으로 다뤄 본 기술</p>
-            </div>
-            <ul>
-              <li>서버 · DB 연동</li>
-              <li>Web / App 인터페이스</li>
-              <li>MQTT</li>
-            </ul>
-          </div>
         </div>
       </section>
     </main>
