@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="김준현 | Edge AI · Computer Vision Engineer" />
-    <title>김준현 · AI Systems Portfolio</title>
+    <meta name="description" content="김준현 | 홍익대학교 전자전기공학과 석사과정 · Edge AI, Computer Vision, 산업 안전 모니터링" />
+    <title>김준현 · 연구 포트폴리오</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -12,122 +12,627 @@
   </head>
   <body>
     <div class="noise" aria-hidden="true"></div>
+
     <header class="site-header">
-      <a class="brand" href="#top" aria-label="첫 화면으로">JH<span>.</span></a>
+      <a class="brand" href="#top" aria-label="첫 화면으로">KIM JOONHYUN</a>
       <nav aria-label="주요 메뉴">
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#journey">Journey</a>
-        <a href="#contact">Contact</a>
+        <a href="#profile">프로필</a>
+        <a href="#papers">학술논문</a>
+        <a href="#grants">연구과제</a>
+        <a href="#projects">프로젝트</a>
+        <a href="#activities">활동</a>
+        <a href="#stack">기술 스택</a>
       </nav>
       <a class="header-link" href="https://github.com/joonhyunkim1" target="_blank" rel="noreferrer">GitHub ↗</a>
     </header>
 
     <main id="top">
-      <section class="hero section-shell" aria-labelledby="hero-title">
-        <div class="hero-orb orb-one"></div><div class="hero-orb orb-two"></div>
-        <p class="eyebrow"><span></span> AVAILABLE FOR NEW CHALLENGES</p>
-        <div class="hero-layout">
-          <div>
-            <h1 id="hero-title">AI를 현실의<br /><em>움직임으로.</em></h1>
-            <p class="hero-copy">센서·영상·음향 데이터를 해석해, 엣지 환경에서<br />탐지부터 판단·제어까지 완성하는 AI 엔지니어입니다.</p>
-            <div class="hero-actions">
-              <a class="button primary" href="#projects">프로젝트 보기 <b>↓</b></a>
-              <a class="button quiet" href="#about">더 알아보기 <b>→</b></a>
+      <!-- 01. 연구 프로필 ================================================ -->
+      <section id="profile" class="profile section-shell">
+        <div class="section-heading">
+          <p class="section-label">01</p>
+          <h2>연구 프로필</h2>
+          <p class="section-sub">Graduate Research Overview</p>
+        </div>
+
+        <div class="profile-grid">
+          <!-- 좌측: 신원 카드 -->
+          <div class="id-column">
+            <div class="id-card">
+              <div class="id-photo-frame">
+                <span class="id-photo-fallback" aria-hidden="true">KJH</span>
+                <img
+                  class="id-photo"
+                  src="assets/profile.jpg"
+                  alt="김준현 증명사진"
+                  width="425"
+                  height="567"
+                  onerror="this.remove()"
+                />
+              </div>
+              <div class="id-body">
+                <h3>김준현</h3>
+                <p class="id-affil">홍익대학교 대학원<br />전자전기공학과 · 석사과정</p>
+                <p class="id-term">2025.03 — 2027.02 <span>(졸업예정)</span></p>
+              </div>
+            </div>
+
+            <div class="panel lab-panel">
+              <p class="panel-label">지도교수 · 연구실</p>
+              <p class="lab-prof">임종태 교수</p>
+              <p class="lab-name">지능정보처리연구실</p>
+            </div>
+
+            <div class="gpa-row">
+              <div class="panel gpa">
+                <p class="panel-label">학부 GPA</p>
+                <p class="gpa-value">3.3<span> / 4.5</span></p>
+              </div>
+              <div class="panel gpa">
+                <p class="panel-label">대학원 GPA</p>
+                <p class="gpa-value accent">4.5<span> / 4.5</span></p>
+              </div>
+            </div>
+
+            <div class="panel cert-panel">
+              <p class="panel-label">자격 · 어학</p>
+              <ul class="cert-list">
+                <li><span>정보처리기사</span><time>2026.06</time></li>
+                <li><span>빅데이터분석기사</span><time>2024.07</time></li>
+                <li><span>OPIc (영어) Intermediate High</span><time>—</time></li>
+              </ul>
             </div>
           </div>
-          <aside class="profile-card" aria-label="프로필 요약">
-            <div class="profile-top"><span class="pulse"></span><span>PROFILE / 01</span></div>
-            <div class="monogram">KJH</div>
-            <div class="profile-line"></div>
-            <p>김준현 <small>Kim Joonhyun</small></p>
-            <ul>
-              <li><span>FOCUS</span><b>Edge AI · Vision · Control</b></li>
-              <li><span>BASED IN</span><b>Seoul, Korea</b></li>
-              <li><span>EDUCATION</span><b>Hongik University</b></li>
-            </ul>
-          </aside>
+
+          <!-- 우측: 연구 요약 -->
+          <div class="summary-column">
+            <div class="focus-box">
+              <p class="panel-label">Research Focus</p>
+              <p class="focus-tag">투고 예정</p>
+              <h3>임베디드 환경에서의 작업장·작업자 이상탐지 및 예측과 자율대응조치를 위한 통합 시스템 개발</h3>
+            </div>
+
+            <div class="summary-split">
+              <div class="panel list-panel">
+                <p class="panel-label">연구실적 · 학술논문 <b>5편</b></p>
+                <ul class="mini-list">
+                  <li>
+                    <span class="badge first">학술대회 1저자</span>
+                    <p>산업안전 모니터링을 위한 MobileCLIP-CoOp 모델의 Edge AI 적용에 관한 연구</p>
+                    <small>한국전기전자학회 하계학술대회 · 2026.08</small>
+                  </li>
+                  <li>
+                    <span class="badge first">학술대회 1저자</span>
+                    <p>임베디드 시스템 환경에서의 CCTV 기반 실시간 작업자 안전 모니터링 알고리즘에 관한 연구</p>
+                    <small>한국지능시스템학회 추계학술대회 · 2025.11</small>
+                  </li>
+                  <li>
+                    <span class="badge journal">등재학술지 2저자</span>
+                    <p>임베디드 환경에서 딥러닝 기반 전염병 확산 방지 시스템</p>
+                    <small>스마트미디어저널 제15권 3호 · 2026.03</small>
+                  </li>
+                  <li>
+                    <span class="badge">학술대회 2저자</span>
+                    <p>열화상 기반 실시간 산업현장 위험 모니터링에 관한 연구</p>
+                    <small>한국지능시스템학회 추계학술대회 · 2025.11</small>
+                  </li>
+                  <li>
+                    <span class="badge">학술대회 2저자</span>
+                    <p>제한된 길이의 음향 신호 분석을 통한 실시간 오디오 모니터링에 관한 연구</p>
+                    <small>한국전기전자학회 하계학술대회 · 2026.08</small>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="panel list-panel">
+                <p class="panel-label">연구과제 참여 <b>3건 · 국가 R&amp;D</b></p>
+                <ul class="mini-list grant">
+                  <li>
+                    <p>배전반·분전반 전기설비 사고 지능형 사전예측 및 안전 모니터링</p>
+                    <small>한국산업기술평가원 · 2025.03 — 2026.05</small>
+                  </li>
+                  <li>
+                    <p>다중 센서 기반 작업장 환경위험 탐지 및 대응 기술 개발</p>
+                    <small>중소기업기술정보진흥원 · 2024.07 — 2026.12</small>
+                  </li>
+                  <li>
+                    <p>복합 AIoT 기반 산업현장 작업자 안전 모니터링 시스템 개발</p>
+                    <small>중소기업기술정보진흥원 · 2024.07 — 2026.12</small>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="panel stack-panel">
+              <p class="panel-label">Core Stack</p>
+              <ul class="chip-row">
+                <li>Python · PyTorch</li>
+                <li>OpenCV · C/C++</li>
+                <li>Jetson Orin / Nano</li>
+                <li>TensorRT · ONNX</li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <div class="quick-links" aria-label="요약 바로가기">
-          <a href="#projects"><i>01</i><strong>Selected<br />Projects</strong><b>↘</b></a>
-          <a href="#impact"><i>02</i><strong>Key<br />Impact</strong><b>↘</b></a>
-          <a href="#journey"><i>03</i><strong>Experience<br />& Learning</strong><b>↘</b></a>
-          <a href="#skills"><i>04</i><strong>Technical<br />Toolkit</strong><b>↘</b></a>
+
+        <div class="metrics">
+          <article>
+            <p class="metric-number">93.3<span>%</span></p>
+            <p>8-shot 분류 정확도</p>
+          </article>
+          <article>
+            <p class="metric-number">19.8<span>ms</span></p>
+            <p>Edge 추론 지연시간</p>
+          </article>
+          <article>
+            <p class="metric-number">4.8<span>×</span></p>
+            <p>추론 속도 향상</p>
+          </article>
+          <article>
+            <p class="metric-number">+22.0<span>%p</span></p>
+            <p>Zero-shot 대비 최대 개선</p>
+          </article>
         </div>
       </section>
 
-      <section id="about" class="intro section-shell reveal">
-        <p class="section-label">01 — ABOUT</p>
-        <div class="intro-grid">
-          <h2>데이터를 읽고,<br />현장을 <em>바꿉니다.</em></h2>
-          <div class="intro-text">
-            <p>Computer Vision과 Edge AI를 기반으로 산업 현장의 이상 징후를 탐지하고, 그 결과를 실제 장비의 동작까지 연결해 왔습니다.</p>
-            <p>모델 정확도만이 아니라 입력 장치, 추론 지연, 통신 구조까지 함께 설계합니다. 제한된 환경에서도 작동하는 시스템을 만드는 것이 제 강점입니다.</p>
-            <a href="#journey" class="text-link">이력 살펴보기 <span>→</span></a>
+      <!-- 02. 학술논문 ================================================== -->
+      <section id="papers" class="papers section-shell reveal">
+        <div class="section-heading">
+          <p class="section-label">02</p>
+          <h2>학술논문</h2>
+          <p class="section-sub">Publications · 5편 (제1저자 2편)</p>
+        </div>
+
+        <ol class="record-list">
+          <li class="record">
+            <div class="record-meta">
+              <span class="record-no">01</span>
+              <span class="badge first">학술대회 1저자</span>
+              <time>2026.08</time>
+            </div>
+            <div class="record-body">
+              <h3>산업안전 모니터링을 위한 MobileCLIP-CoOp 모델의 Edge AI 적용에 관한 연구</h3>
+              <p class="venue">한국전기전자학회 하계학술대회</p>
+              <p>
+                산업 현장의 이상 상황은 사고 특성상 학습 데이터를 충분히 모으기 어렵습니다.
+                이 연구는 경량 비전-언어 모델인 MobileCLIP에 프롬프트 학습 기법 CoOp을 적용해,
+                클래스당 8장의 이미지만으로 분류기를 학습시키는 방식을 제안했습니다.
+              </p>
+              <p>
+                Jetson 계열 엣지 보드에서 ONNX 변환과 TensorRT FP16 최적화를 거쳐 추론 지연을 19.8ms까지 낮췄고,
+                8-shot 조건에서 93.3%의 분류 정확도를 확보했습니다. Zero-shot 대비 최대 22.0%p 개선된 결과입니다.
+              </p>
+              <ul class="tags">
+                <li>MobileCLIP</li>
+                <li>CoOp</li>
+                <li>Few-shot Learning</li>
+                <li>TensorRT</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="record">
+            <div class="record-meta">
+              <span class="record-no">02</span>
+              <span class="badge first">학술대회 1저자</span>
+              <time>2025.11</time>
+            </div>
+            <div class="record-body">
+              <h3>임베디드 시스템 환경에서의 CCTV 기반 실시간 작업자 안전 모니터링 알고리즘에 관한 연구</h3>
+              <p class="venue">한국지능시스템학회 추계학술대회</p>
+              <p>
+                현장에 이미 설치된 CCTV 영상을 그대로 활용해, 별도 장비 증설 없이 작업자 안전을 감시하는
+                알고리즘을 제안했습니다. 객체 탐지 결과를 작업 구역 정보와 결합해 위험 상황을 판정하는 구조입니다.
+              </p>
+              <p>
+                연산 자원이 제한된 Jetson Nano 환경에서 실시간성을 확보하는 데 초점을 맞췄고,
+                모델 경량화와 전처리 단계 최적화를 통해 15 FPS의 처리 속도를 달성했습니다.
+              </p>
+              <ul class="tags">
+                <li>CCTV</li>
+                <li>Object Detection</li>
+                <li>Jetson Nano</li>
+                <li>실시간 처리</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="record">
+            <div class="record-meta">
+              <span class="record-no">03</span>
+              <span class="badge journal">등재학술지 2저자</span>
+              <time>2026.03</time>
+            </div>
+            <div class="record-body">
+              <h3>임베디드 환경에서 딥러닝 기반 전염병 확산 방지 시스템</h3>
+              <p class="venue">스마트미디어저널 제15권 3호</p>
+              <p>
+                영상과 음향을 함께 사용해 전염병 확산 위험 요소를 감지하는 시스템을 다룬 연구입니다.
+                영상에서는 인원 밀집과 마스크 착용 여부 등을, 음향에서는 기침 등 이상 신호를 판별하는 구조로 구성했습니다.
+              </p>
+              <p>
+                전체 파이프라인을 임베디드 보드에서 동작시키는 것을 전제로 설계해,
+                모델 크기와 처리 순서를 조정하며 제한된 자원 안에서 두 가지 신호를 함께 다루는 방법을 검증했습니다.
+              </p>
+              <ul class="tags">
+                <li>Vision</li>
+                <li>Audio</li>
+                <li>Embedded</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="record">
+            <div class="record-meta">
+              <span class="record-no">04</span>
+              <span class="badge">학술대회 2저자</span>
+              <time>2025.11</time>
+            </div>
+            <div class="record-body">
+              <h3>열화상 기반 실시간 산업현장 위험 모니터링에 관한 연구</h3>
+              <p class="venue">한국지능시스템학회 추계학술대회</p>
+              <p>
+                일반 RGB 카메라로는 잡아내기 어려운 과열·발화 징후를 열화상 카메라로 감지하는 연구입니다.
+                온도 분포에서 이상 영역을 찾아내고, 이를 실시간으로 현장에 전달하는 모니터링 구조를 다뤘습니다.
+              </p>
+              <ul class="tags">
+                <li>Thermal Imaging</li>
+                <li>이상 탐지</li>
+                <li>산업 안전</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="record">
+            <div class="record-meta">
+              <span class="record-no">05</span>
+              <span class="badge">학술대회 2저자</span>
+              <time>2026.08</time>
+            </div>
+            <div class="record-body">
+              <h3>제한된 길이의 음향 신호 분석을 통한 실시간 오디오 모니터링에 관한 연구</h3>
+              <p class="venue">한국전기전자학회 하계학술대회</p>
+              <p>
+                현장에서 위험 신호를 빨리 알아차리려면 긴 구간을 모아 판단할 여유가 없습니다.
+                이 연구는 짧게 잘린 음향 신호만으로 이상음을 판별할 수 있는지를 확인하고,
+                실시간 오디오 모니터링에 적용하는 방법을 다뤘습니다.
+              </p>
+              <ul class="tags">
+                <li>Audio</li>
+                <li>MFCC</li>
+                <li>실시간 처리</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <!-- 03. 연구과제 ================================================== -->
+      <section id="grants" class="grants section-shell reveal">
+        <div class="section-heading">
+          <p class="section-label">03</p>
+          <h2>참여 연구과제</h2>
+          <p class="section-sub">National R&amp;D Projects · 3건</p>
+        </div>
+
+        <ol class="record-list">
+          <li class="record">
+            <div class="record-meta">
+              <span class="record-no">01</span>
+              <span class="badge grant-badge">국가 R&amp;D</span>
+              <time>2025.03 — 2026.05</time>
+            </div>
+            <div class="record-body">
+              <h3>배전반·분전반 전기설비 사고 지능형 사전예측 및 안전 모니터링</h3>
+              <p class="venue">한국산업기술평가원 · 참여연구원</p>
+              <p>
+                배전반과 분전반에서 발생하는 전기 설비 사고를 사고 이전 단계에서 감지하는 과제입니다.
+                전류·온도·음향 등 설비에서 수집되는 신호를 함께 분석해 이상 징후를 판별하고,
+                사고로 이어지기 전에 경고를 발생시키는 것을 목표로 했습니다.
+              </p>
+              <ul class="tags">
+                <li>전기설비 진단</li>
+                <li>시계열 예측</li>
+                <li>이상 탐지</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="record">
+            <div class="record-meta">
+              <span class="record-no">02</span>
+              <span class="badge grant-badge">국가 R&amp;D</span>
+              <time>2024.07 — 2026.12</time>
+            </div>
+            <div class="record-body">
+              <h3>다중 센서 기반 작업장 환경위험 탐지 및 대응 기술 개발</h3>
+              <p class="venue">중소기업기술정보진흥원 · 참여연구원</p>
+              <p>
+                온·습도, CO, CO₂, TVOC, 미세먼지 등 작업장 환경 데이터를 다중 센서로 수집하고,
+                센서별 특성에 맞춘 전처리와 시계열 예측을 적용해 환경 위험을 사전에 판단하는 과제입니다.
+              </p>
+              <p>
+                Kalman 필터와 Hampel 필터를 센서별로 조합하고 파라미터 스윕으로 최적 조합을 탐색해,
+                LSTM 기반 예측 오차를 8.8% 개선했습니다.
+              </p>
+              <ul class="tags">
+                <li>다중 센서</li>
+                <li>Kalman · Hampel</li>
+                <li>LSTM</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="record">
+            <div class="record-meta">
+              <span class="record-no">03</span>
+              <span class="badge grant-badge">국가 R&amp;D</span>
+              <time>2024.07 — 2026.12</time>
+            </div>
+            <div class="record-body">
+              <h3>복합 AIoT 기반 산업현장 작업자 안전 모니터링 시스템 개발</h3>
+              <p class="venue">중소기업기술정보진흥원 · 참여연구원</p>
+              <p>
+                영상·음향·센서를 하나의 AIoT 플랫폼으로 묶어 작업자 안전을 관리하는 과제입니다.
+                데이터 수집부터 분석, 경고 발생, 구동기 제어, 서버 및 Web/App 연동까지
+                탐지-판단-대응의 전체 흐름을 구성하는 역할을 맡았습니다.
+              </p>
+              <ul class="tags">
+                <li>AIoT</li>
+                <li>Edge-Server 연동</li>
+                <li>구동기 제어</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <!-- 04. 프로젝트 ================================================== -->
+      <section id="projects" class="projects section-shell reveal">
+        <div class="section-heading">
+          <p class="section-label">04</p>
+          <h2>프로젝트</h2>
+          <p class="section-sub">Engineering Detail · 3건</p>
+        </div>
+
+        <ol class="record-list">
+          <li class="record">
+            <div class="record-meta">
+              <span class="record-no">01</span>
+              <span class="badge">Edge AI</span>
+              <time>2026</time>
+            </div>
+            <div class="record-body">
+              <h3>Edge AI 기반 작업장·작업자 이상 상황 탐지 시스템</h3>
+              <p class="venue">모델 학습 · 엣지 최적화 · 구동부 제어</p>
+              <p>
+                MobileCLIP에 CoOp을 적용한 Few-shot 분류 모델을 구현하고, 탐지 결과를 Grad-CAM으로 시각화해
+                이상이 발생한 위치를 산출했습니다. 산출된 좌표는 PID 제어와 RS485 통신을 통해
+                Pan/Tilt 구동부로 전달되어 카메라가 대상을 따라가도록 연결했습니다.
+              </p>
+              <p>
+                모델 정확도뿐 아니라 파이프라인 전체의 지연을 함께 다뤘습니다.
+                ONNX 변환과 TensorRT FP16 최적화, 카메라 입력 단계 개선을 통해
+                추론 지연을 94.6ms에서 19.8ms로 단축해 약 4.8배의 속도 향상을 얻었습니다.
+              </p>
+              <ul class="tags">
+                <li>MobileCLIP</li>
+                <li>CoOp</li>
+                <li>Grad-CAM</li>
+                <li>TensorRT</li>
+                <li>Jetson Orin</li>
+                <li>PID · RS485</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="record">
+            <div class="record-meta">
+              <span class="record-no">02</span>
+              <span class="badge">AIoT</span>
+              <time>2024 — 2026</time>
+            </div>
+            <div class="record-body">
+              <h3>스마트 산업 현장 안전 모니터링 플랫폼</h3>
+              <p class="venue">센서 수집 · 시계열 분석 · 시스템 통합</p>
+              <p>
+                온·습도, CO, CO₂, TVOC, 미세먼지, CT 센서와 음향 센서, RGB·열화상 카메라를 결합한
+                통합 안전관리 시스템입니다. Arduino Mega2560을 기반으로 다중 센서 데이터를 수집하고,
+                센서마다 노이즈 특성이 달라 필터 조합을 개별적으로 설계했습니다.
+              </p>
+              <p>
+                수집된 데이터는 시계열 예측과 영상 분석을 거쳐 위험도를 판정하고,
+                경고 발생과 구동기 제어로 이어집니다. 결과는 서버를 통해 Web/App으로 전달되어
+                현장 밖에서도 상태를 확인할 수 있도록 구성했습니다.
+              </p>
+              <ul class="tags">
+                <li>YOLO</li>
+                <li>다중 센서</li>
+                <li>LSTM</li>
+                <li>Arduino</li>
+                <li>Web / App</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="record">
+            <div class="record-meta">
+              <span class="record-no">03</span>
+              <span class="badge">Multimodal</span>
+              <time>2026</time>
+            </div>
+            <div class="record-body">
+              <h3>영상·음향 복합 신호 기반 실시간 위험 감지</h3>
+              <p class="venue">다중 객체 추적 · 음향 분류 · 병목 최적화</p>
+              <p>
+                열화상과 RGB 영상의 객체 탐지 결과에 음향 분석을 결합해 위험 상황을 판별했습니다.
+                YOLOv6n과 DeepSORT 기반의 다중 객체 추적을 Raspberry Pi 4B 환경에 통합했고,
+                파이프라인 단계별 병목을 측정해 추적 속도를 1 FPS에서 8 FPS까지 개선했습니다.
+              </p>
+              <p>
+                음향 신호에는 MFCC 변환 후 CNN 분류기를 적용해 폭발음·비명음·배경음을 구분했습니다.
+                데이터 증강으로 학습 데이터의 편중을 줄여 최대 99.7%의 분류 정확도를 확인했습니다.
+              </p>
+              <ul class="tags">
+                <li>YOLOv6n</li>
+                <li>DeepSORT</li>
+                <li>MFCC · CNN</li>
+                <li>Raspberry Pi 4B</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <!--
+        05. 개인 프로젝트 — 내용 확정되면 아래 주석을 풀고 채우세요.
+            같은 .record 구조를 그대로 사용하면 스타일이 맞습니다.
+
+      <section id="personal" class="personal section-shell reveal">
+        <div class="section-heading">
+          <p class="section-label">05</p>
+          <h2>개인 프로젝트</h2>
+          <p class="section-sub">Personal Projects</p>
+        </div>
+        <ol class="record-list">
+          <li class="record">
+            <div class="record-meta">
+              <span class="record-no">01</span>
+              <span class="badge">분류</span>
+              <time>연도</time>
+            </div>
+            <div class="record-body">
+              <h3>프로젝트 제목</h3>
+              <p class="venue">한 줄 요약</p>
+              <p>무엇을 왜 만들었는지, 어떤 방식으로 해결했는지.</p>
+              <ul class="tags"><li>기술</li></ul>
+            </div>
+          </li>
+        </ol>
+      </section>
+      -->
+
+      <!-- 06. 활동 · 학력 =============================================== -->
+      <section id="activities" class="activities section-shell reveal">
+        <div class="section-heading">
+          <p class="section-label">05</p>
+          <h2>활동 · 학력</h2>
+          <p class="section-sub">Experience &amp; Education</p>
+        </div>
+
+        <div class="timeline">
+          <article>
+            <time>2025.03 — 2027.02</time>
+            <div>
+              <h3>홍익대학교 대학원 석사과정</h3>
+              <p>전자전기공학과 · 지능정보처리연구실 (지도교수 임종태)</p>
+            </div>
+            <span>학력</span>
+          </article>
+          <article>
+            <time>2024.07 — 2026.12</time>
+            <div>
+              <h3>국가 R&amp;D 과제 참여연구원</h3>
+              <p>산업현장 안전 모니터링 관련 과제 3건 참여 · 영상/센서 분석 및 시스템 통합 담당</p>
+            </div>
+            <span>연구</span>
+          </article>
+          <article>
+            <time>2024 — 2025</time>
+            <div>
+              <h3>NAVER Boostcamp AI Tech 7기</h3>
+              <p>Computer Vision 트랙 · Classification / Object Detection / Segmentation 과정 수료</p>
+            </div>
+            <span>교외 활동</span>
+          </article>
+          <article>
+            <time>2023 — 2024</time>
+            <div>
+              <h3>Embedded AI Lab 학부연구생</h3>
+              <p>AIoT 기반 터널 스마트 조명 제어 및 교통 상황 분석 연구 참여</p>
+            </div>
+            <span>교내 활동</span>
+          </article>
+          <article>
+            <time>2018.03 — 2025.02</time>
+            <div>
+              <h3>홍익대학교 학사</h3>
+              <p>전자전기공학부 · 전기전자(SW) 전공</p>
+            </div>
+            <span>학력</span>
+          </article>
+        </div>
+      </section>
+
+      <!-- 07. 기술 스택 ================================================= -->
+      <section id="stack" class="stack section-shell reveal">
+        <div class="section-heading">
+          <p class="section-label">06</p>
+          <h2>기술 스택</h2>
+          <p class="section-sub">Technical Stack · 숙련도별 분류</p>
+        </div>
+
+        <div class="stack-levels">
+          <div class="level-block high">
+            <div class="level-head">
+              <span class="level-mark">상</span>
+              <p>연구·과제에서 주도적으로 사용한 기술</p>
+            </div>
+            <ul>
+              <li>Python</li>
+              <li>PyTorch</li>
+              <li>OpenCV</li>
+              <li>YOLO 계열</li>
+              <li>Jetson Orin / Nano</li>
+              <li>TensorRT · ONNX</li>
+              <li>Linux · Git</li>
+            </ul>
+          </div>
+
+          <div class="level-block mid">
+            <div class="level-head">
+              <span class="level-mark">중</span>
+              <p>프로젝트에 적용해 본 기술</p>
+            </div>
+            <ul>
+              <li>C / C++</li>
+              <li>TensorFlow</li>
+              <li>Docker</li>
+              <li>Arduino · RS485</li>
+              <li>LSTM · Kalman Filter</li>
+              <li>MFCC · 음향 분류</li>
+              <li>Grad-CAM</li>
+            </ul>
+          </div>
+
+          <div class="level-block low">
+            <div class="level-head">
+              <span class="level-mark">하</span>
+              <p>보조적으로 다뤄 본 기술</p>
+            </div>
+            <ul>
+              <li>서버 · DB 연동</li>
+              <li>Web / App 인터페이스</li>
+              <li>MQTT</li>
+            </ul>
           </div>
         </div>
       </section>
-
-      <section id="impact" class="impact section-shell reveal" aria-labelledby="impact-title">
-        <div class="section-heading"><p class="section-label">02 — IMPACT</p><h2 id="impact-title">숫자로 증명한<br /><em>문제 해결.</em></h2></div>
-        <div class="metrics">
-          <article><p class="metric-number">93.3<span>%</span></p><p>클래스당 8개 데이터로<br />달성한 Few-shot 정확도</p><small>MobileCLIP + CoOp</small></article>
-          <article><p class="metric-number">4.8<span>×</span></p><p>추론 지연을 줄여<br />개선한 처리 속도</p><small>94.6ms → 19.8ms</small></article>
-          <article><p class="metric-number">8.8<span>%</span></p><p>센서별 전처리 최적화로<br />개선한 LSTM 예측 오차</p><small>Kalman · Hampel · Sweep</small></article>
-        </div>
-      </section>
-
-      <section id="projects" class="projects section-shell reveal" aria-labelledby="project-title">
-        <div class="section-heading row"><div><p class="section-label">03 — SELECTED PROJECTS</p><h2 id="project-title">현장에서 검증한<br /><em>AI 시스템.</em></h2></div><p class="project-note">카드를 선택하면<br />해당 프로젝트 내용으로 이동합니다.</p></div>
-        <div class="project-list">
-          <a class="project-card featured" href="#project-edge">
-            <div class="card-index">01 / EDGE AI</div><div class="card-visual vision"><span class="crosshair"></span><span class="vision-label">ANOMALY<br />DETECTED</span><span class="vision-dot"></span></div>
-            <div class="card-content"><div><p>INDUSTRIAL SAFETY</p><h3>Edge AI 기반<br />이상 상황 탐지</h3></div><span class="round-arrow">↘</span></div>
-            <ul class="tags"><li>MobileCLIP</li><li>TensorRT</li><li>Jetson Orin</li></ul>
-          </a>
-          <a class="project-card" href="#project-factory">
-            <div class="card-index">02 / AIoT</div><div class="card-visual grid-visual"><span>SAFE<br />WORKPLACE</span></div>
-            <div class="card-content"><div><p>AIoT PLATFORM</p><h3>스마트 산업 현장<br />안전 모니터링</h3></div><span class="round-arrow">↘</span></div>
-            <ul class="tags"><li>YOLO</li><li>Sensor Data</li><li>Web / App</li></ul>
-          </a>
-          <a class="project-card" href="#project-tracking">
-            <div class="card-index">03 / MULTIMODAL</div><div class="card-visual track-visual"><span class="path path-a"></span><span class="path path-b"></span><span class="track-object">AI</span></div>
-            <div class="card-content"><div><p>VISION + AUDIO</p><h3>복합 신호 기반<br />실시간 위험 감지</h3></div><span class="round-arrow">↘</span></div>
-            <ul class="tags"><li>YOLOv6n</li><li>MFCC + CNN</li><li>Raspberry Pi</li></ul>
-          </a>
-        </div>
-      </section>
-
-      <section class="details section-shell reveal" aria-label="프로젝트 상세">
-        <article id="project-edge" class="detail-project"><div class="detail-no">01</div><div><p class="section-label">EDGE AI / 2026</p><h3>데이터가 적어도, 현장에서는 멈추지 않도록.</h3></div><div class="detail-copy"><p>작업자·작업장 이상 상황을 탐지하는 시스템을 개발했습니다. MobileCLIP에 CoOp을 적용해 Few-shot 분류 모델을 구현하고, Grad-CAM과 PID 제어·RS485 통신으로 Pan/Tilt 구동까지 연결했습니다.</p><p>클래스당 8개 데이터로 93.3% 정확도를 달성했고, ONNX·TensorRT FP16 최적화와 카메라 입력 개선으로 추론 지연을 94.6ms에서 19.8ms로 단축했습니다.</p></div></article>
-        <article id="project-factory" class="detail-project"><div class="detail-no">02</div><div><p class="section-label">AIoT / 2024—2026</p><h3>감지에서 판단,<br />대응까지 이어지게.</h3></div><div class="detail-copy"><p>온·습도, CO, CO₂, TVOC, 미세먼지, CT·음향 센서와 RGB·열화상 카메라를 결합한 산업 현장 안전관리 시스템을 개발했습니다.</p><p>Arduino Mega2560 기반 데이터 수집부터 센서별 필터링·시계열 예측·영상 분석, 경고와 구동기 제어, 서버·Web/App 통합까지 ‘탐지-판단-대응’의 전체 흐름을 설계했습니다.</p></div></article>
-        <article id="project-tracking" class="detail-project"><div class="detail-no">03</div><div><p class="section-label">MULTIMODAL AI / 2026</p><h3>보이는 위험과<br />들리는 위험을 함께.</h3></div><div class="detail-copy"><p>열화상·RGB 영상의 객체 탐지와 음향 신호 분석을 결합해 위험 상황을 실시간으로 감지했습니다. YOLOv6n·DeepSORT 기반 다중 객체 추적을 Raspberry Pi 4B에서 통합하고, 병목 최적화로 추적 속도를 1 FPS에서 8 FPS까지 개선했습니다.</p><p>음향 데이터에는 MFCC 변환과 CNN을 적용해 폭발음·비명음·배경음을 분류했고, 데이터 증강을 통해 최대 99.7% 정확도를 검증했습니다.</p></div></article>
-      </section>
-
-      <section id="research" class="research section-shell reveal" aria-labelledby="research-title">
-        <div class="section-heading row"><div><p class="section-label">04 — RESEARCH</p><h2 id="research-title">연구를 통해<br /><em>현장에 답하다.</em></h2></div><p class="project-note">논문·학회 발표를 통해<br />검증한 시스템 연구</p></div>
-        <div class="paper-list">
-          <article><span>01</span><div><p>2026 IKEEE SUMMER CONFERENCE · FIRST AUTHOR</p><h3>산업안전 모니터링을 위한<br />MobileCLIP-CoOp 모델의 Edge AI 적용</h3></div><strong>93.3%<small>8 samples / class</small></strong></article>
-          <article><span>02</span><div><p>KIIS AUTUMN CONFERENCE 2025 · FIRST AUTHOR</p><h3>임베디드 시스템 환경에서의 CCTV 기반<br />실시간 작업자 안전 모니터링 알고리즘</h3></div><strong>15 FPS<small>Jetson Nano</small></strong></article>
-          <article><span>03</span><div><p>SMART MEDIA JOURNAL · SECOND AUTHOR</p><h3>임베디드 환경에서 딥러닝 기반<br />전염병 확산 방지 시스템</h3></div><strong>VISION<small>+ Audio + Edge</small></strong></article>
-        </div>
-      </section>
-
-      <section id="journey" class="journey section-shell reveal">
-        <div class="section-heading"><p class="section-label">05 — JOURNEY</p><h2>배움에서 현장으로,<br /><em>계속 확장 중.</em></h2></div>
-        <div class="timeline">
-          <article><time>2025 — 2027</time><div><h3>홍익대학교 석사</h3><p>전자전기공학 · 전기전자(SW)</p></div><span>EDUCATION</span></article>
-          <article><time>2024 — 2026</time><div><h3>산업 현장 AIoT 프로젝트</h3><p>중소기업산학협력센터(서울) · 참여연구원</p></div><span>RESEARCH</span></article>
-          <article><time>2024 — 2025</time><div><h3>NAVER Boostcamp AI Tech 7기</h3><p>Computer Vision · Classification / Detection / Segmentation</p></div><span>LEARNING</span></article>
-          <article><time>2023 — 2024</time><div><h3>Embedded AI Lab 학부연구생</h3><p>AIoT 기반 터널 스마트 조명 제어·교통 상황 분석</p></div><span>RESEARCH</span></article>
-          <article><time>2018 — 2025</time><div><h3>홍익대학교 학사</h3><p>전자전기공학 · 전기전자(SW)</p></div><span>EDUCATION</span></article>
-        </div>
-      </section>
-
-      <section id="skills" class="skills section-shell reveal"><p class="section-label">06 — TOOLKIT</p><div class="skills-grid"><h2>기술은 도구이고,<br /><em>연결이 역량입니다.</em></h2><div class="skill-groups"><div><p>AI / VISION</p><ul><li>PyTorch</li><li>TensorFlow</li><li>OpenCV</li><li>YOLO</li></ul></div><div><p>EDGE / DEPLOY</p><ul><li>Jetson Orin</li><li>TensorRT</li><li>ONNX</li><li>Docker</li></ul></div><div><p>SYSTEM / CONTROL</p><ul><li>Python · C/C++</li><li>Linux · Git</li><li>RS485 · PID</li><li>Arduino · AIoT</li></ul></div></div></div></section>
     </main>
 
-    <footer id="contact" class="footer"><div class="section-shell"><p class="section-label">07 — CONTACT</p><h2>함께, 더 나은<br /><em>현장을 만들어요.</em></h2><a class="email" href="mailto:joon5159@naver.com">joon5159@naver.com <span>↗</span></a><div class="footer-bottom"><span>© 2026 KIM JOONHYUN</span><a href="#top">BACK TO TOP ↑</a><a href="https://github.com/joonhyunkim1" target="_blank" rel="noreferrer">GITHUB ↗</a></div></div></footer>
+    <footer id="contact" class="footer">
+      <div class="section-shell">
+        <p class="section-label">07</p>
+        <h2>연락처</h2>
+        <a class="email" href="mailto:joon5159@naver.com">joon5159@naver.com <span>↗</span></a>
+        <div class="footer-bottom">
+          <span>© 2026 KIM JOONHYUN</span>
+          <a href="#top">맨 위로 ↑</a>
+          <a href="https://github.com/joonhyunkim1" target="_blank" rel="noreferrer">GITHUB ↗</a>
+        </div>
+      </div>
+    </footer>
+
     <script src="script.js"></script>
   </body>
 </html>
