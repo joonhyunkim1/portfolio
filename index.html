@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css?v=2026092101" />
+    <link rel="stylesheet" href="style.css?v=2026092102" />
   </head>
   <body>
     <div class="noise" aria-hidden="true"></div>
@@ -38,8 +38,19 @@
             <h2>연구 프로필</h2>
             <p class="section-sub">Graduate Research Overview</p>
           </div>
-          <button type="button" class="pdf-button" id="pdf-button">
-            PDF로 저장 <span aria-hidden="true">↓</span>
+          <button
+            type="button"
+            class="pdf-button"
+            id="pdf-button"
+            title="인쇄 · PDF로 저장"
+            aria-label="인쇄 또는 PDF로 저장"
+          >
+            <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true" focusable="false">
+              <path d="M7 8V3.5h10V8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+              <rect x="3.5" y="8" width="17" height="8" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6" />
+              <path d="M7 14h10v6.5H7z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+              <circle cx="17" cy="11" r="1" fill="currentColor" />
+            </svg>
           </button>
         </div>
 

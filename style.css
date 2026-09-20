@@ -259,31 +259,32 @@ h2 {
   padding-top: 70px;
 }
 
-/* 제목 오른쪽 빈 자리에 PDF 저장 버튼 */
+/* 제목 오른쪽, 헤더의 Instagram 링크 아래에 놓이는 작은 인쇄 버튼 */
 .profile-heading {
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 20px;
 }
 
 .pdf-button {
+  display: grid;
+  place-items: center;
   flex-shrink: 0;
-  padding: 10px 16px;
-  border: 1px solid var(--blue-line);
-  background: var(--navy-deep);
-  color: var(--blue-soft);
-  font: 500 .72rem var(--mono);
-  letter-spacing: .06em;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--muted);
   cursor: pointer;
-  transition: background .2s, color .2s, border-color .2s;
+  transition: color .2s, border-color .2s;
 }
 
 .pdf-button:hover,
 .pdf-button:focus-visible {
-  border-color: var(--blue);
-  background: var(--blue);
-  color: #fff;
+  border-color: var(--blue-line);
+  color: var(--blue-soft);
 }
 
 /*
