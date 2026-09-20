@@ -6,7 +6,7 @@
    4. 타이포그래피     5. 공통 패널·뱃지   6. 헤더
    7. 연구 프로필      8. 기록 리스트      9. 타임라인
    10. 취미            11. 푸터            12. 등장 애니메이션
-   13. 인쇄·PDF        14. 반응형
+   13. 반응형          14. 인쇄·PDF
    ========================================================================== */
 
 
@@ -992,127 +992,7 @@ a.info-row:focus-visible p::after {
 }
 
 
-/* 13. 인쇄 · PDF ========================================================== */
-
-/* 종이에서는 검정 배경 대신 밝은 배경을 쓴다.
-   색을 토큰에서 한 번에 바꾸면 나머지 규칙은 그대로 따라온다 */
-@media print {
-  :root {
-    --bg: #fff;
-    --panel: #fff;
-    --soft: #f3f6fb;
-    --line: #d3d9e3;
-    --line-strong: #aeb8c8;
-
-    --text: #101319;
-    --dim: #2c3340;
-    --muted: #5b6474;
-
-    --navy-deep: #eef3ff;
-    --navy: #dde7ff;
-    --blue: #1746c4;
-    --blue-line: #a8bcea;
-    --blue-soft: #1746c4;
-  }
-
-  @page {
-    margin: 14mm;
-  }
-
-  body {
-    background: #fff;
-  }
-
-  /* 뱃지·사진·지도의 배경색까지 인쇄되도록 (브라우저 기본은 배경 생략) */
-  .badge,
-  .id-photo-frame,
-  .focus-tag,
-  .tier-mark,
-  .travel-map,
-  .travel-land path {
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
-  }
-
-  /* 화면 전용 요소 */
-  .noise,
-  .site-header,
-  .pdf-button,
-  .travel-tip {
-    display: none !important;
-  }
-
-  /* 등장 애니메이션이 끝나지 않은 섹션도 인쇄되도록 */
-  .reveal {
-    opacity: 1 !important;
-    transform: none !important;
-  }
-
-  main > section {
-    padding-bottom: 26px;
-  }
-
-  .profile {
-    padding-top: 0;
-  }
-
-  /* 항목이 페이지 경계에서 잘리지 않게 */
-  .record,
-  .timeline article,
-  .panel,
-  .id-card,
-  .focus-box,
-  .travel-map {
-    break-inside: avoid;
-  }
-
-  h2,
-  .record h3,
-  .section-heading {
-    break-after: avoid;
-  }
-
-  /* 종이 폭에 맞춰 두 단으로 */
-  .profile-grid {
-    grid-template-columns: 250px 1fr;
-    grid-template-areas:
-      "id focus"
-      "id papers"
-      "id side"
-      "stack stack";
-  }
-
-  .id-column > :last-child,
-  .side-column > :last-child {
-    flex: none;
-  }
-
-  /* 지도는 잘리지 않게 전체 폭으로 */
-  .travel-map {
-    overflow: visible;
-  }
-
-  .travel-map svg {
-    min-width: 0;
-  }
-
-  .travel-land path {
-    fill: #e7ebf2;
-    stroke: #c9d1de;
-  }
-
-  .travel-land path.visited {
-    fill: #c6d8ff;
-    stroke: #7f9fe0;
-  }
-
-  a {
-    text-decoration: none;
-  }
-}
-
-
-/* 14. 반응형 ============================================================== */
+/* 13. 반응형 ============================================================== */
 
 @media (max-width: 1080px) {
   .profile-grid {
@@ -1226,5 +1106,198 @@ a.info-row:focus-visible p::after {
 
   .id-photo-frame {
     max-width: 150px;
+  }
+}
+
+
+/* 14. 인쇄 · PDF ========================================================== */
+
+/*
+  인쇄 폭(A4 기준 약 690px)에서는 좁은 화면용 규칙이 잡혀 모든 칸이 한 줄로 쌓인다.
+  그래서 zoom 으로 화면 레이아웃을 통째로 축소해 넣고, 좁은 화면용 규칙은 여기서 되돌린다.
+  이 블록은 반응형 블록보다 뒤에 있어야 우선 적용된다.
+*/
+@media print {
+  :root {
+    --bg: #fff;
+    --panel: #fff;
+    --soft: #f3f6fb;
+    --line: #d3d9e3;
+    --line-strong: #aeb8c8;
+
+    --text: #101319;
+    --dim: #2c3340;
+    --muted: #5b6474;
+
+    --navy-deep: #eef3ff;
+    --navy: #dde7ff;
+    --blue: #1746c4;
+    --blue-line: #a8bcea;
+    --blue-soft: #1746c4;
+  }
+
+  @page {
+    margin: 11mm;
+  }
+
+  /* 데스크톱 폭(1180px)을 종이에 맞춰 축소 */
+  body {
+    zoom: .56;
+    background: #fff;
+  }
+
+  .section-shell {
+    width: 1180px;
+  }
+
+  /* 뱃지·사진·지도의 배경색까지 인쇄되도록 (브라우저 기본은 배경 생략) */
+  .badge,
+  .id-photo-frame,
+  .focus-tag,
+  .tier-mark,
+  .travel-map,
+  .travel-land path {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* 화면 전용 요소 */
+  .noise,
+  .site-header,
+  .pdf-button,
+  .travel-tip {
+    display: none !important;
+  }
+
+  /* 검정 배경용으로 고정해 둔 밝은 색들은 흰 종이에서 보이지 않아 다시 지정한다 */
+  .badge.journal,
+  .badge.grant-badge,
+  .badge.team {
+    color: var(--blue);
+  }
+
+  .badge.solo {
+    border-color: #1d7fa6;
+    background: #eaf7fd;
+    color: #14607f;
+  }
+
+  .stack-tier.high .chip-row li {
+    color: var(--text);
+    border-color: var(--blue-line);
+  }
+
+  .timeline .timeline-detail,
+  .record-id {
+    color: var(--muted);
+  }
+
+  /* 등장 애니메이션이 끝나지 않은 섹션도 인쇄되도록 */
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  /* --- 좁은 화면용 규칙 되돌리기 (화면과 같은 다단 배치 유지) --- */
+  .profile-grid {
+    grid-template-columns: 330px 1.2fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+      "id    focus  focus"
+      "id    papers side"
+      "stack stack  side";
+  }
+
+  .id-card {
+    grid-template-columns: 118px 1fr;
+    gap: 18px;
+  }
+
+  .record {
+    grid-template-columns: 210px 1fr;
+    gap: 30px;
+  }
+
+  .record-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .record-no {
+    font-size: 1.5rem;
+  }
+
+  .timeline article {
+    grid-template-columns: 200px 1fr auto;
+    gap: 25px;
+  }
+
+  .timeline > article > span {
+    margin-top: 0;
+  }
+
+  .travel-map {
+    overflow: visible;
+  }
+
+  .travel-map svg {
+    min-width: 0;
+  }
+
+  .travel-land path {
+    fill: #e7ebf2;
+    stroke: #c9d1de;
+  }
+
+  .travel-land path.visited {
+    fill: #c6d8ff;
+    stroke: #7f9fe0;
+  }
+
+  /* --- 여백 줄이기 --- */
+  .profile {
+    padding-top: 0;
+  }
+
+  main > section {
+    padding-bottom: 46px;
+  }
+
+  .section-heading {
+    margin-bottom: 26px;
+    padding-bottom: 14px;
+  }
+
+  .record {
+    padding: 22px 0;
+  }
+
+  .footer {
+    padding: 40px 0 20px;
+  }
+
+  .email {
+    margin: 18px 0 34px;
+  }
+
+  /* --- 페이지 경계에서 잘리지 않게 --- */
+  .record,
+  .timeline article,
+  .panel,
+  .id-card,
+  .focus-box,
+  .travel-map {
+    break-inside: avoid;
+  }
+
+  h2,
+  .record h3,
+  .section-heading {
+    break-after: avoid;
+  }
+
+  a {
+    text-decoration: none;
   }
 }
