@@ -6,7 +6,7 @@
    4. 타이포그래피     5. 공통 패널·뱃지   6. 헤더
    7. 연구 프로필      8. 기록 리스트      9. 타임라인
    10. 취미            11. 푸터            12. 등장 애니메이션
-   13. 반응형
+   13. 인쇄·PDF        14. 반응형
    ========================================================================== */
 
 
@@ -257,6 +257,33 @@ h2 {
 
 .profile {
   padding-top: 70px;
+}
+
+/* 제목 오른쪽 빈 자리에 PDF 저장 버튼 */
+.profile-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.pdf-button {
+  flex-shrink: 0;
+  padding: 10px 16px;
+  border: 1px solid var(--blue-line);
+  background: var(--navy-deep);
+  color: var(--blue-soft);
+  font: 500 .72rem var(--mono);
+  letter-spacing: .06em;
+  cursor: pointer;
+  transition: background .2s, color .2s, border-color .2s;
+}
+
+.pdf-button:hover,
+.pdf-button:focus-visible {
+  border-color: var(--blue);
+  background: var(--blue);
+  color: #fff;
 }
 
 /*
@@ -964,7 +991,127 @@ a.info-row:focus-visible p::after {
 }
 
 
-/* 13. 반응형 ============================================================== */
+/* 13. 인쇄 · PDF ========================================================== */
+
+/* 종이에서는 검정 배경 대신 밝은 배경을 쓴다.
+   색을 토큰에서 한 번에 바꾸면 나머지 규칙은 그대로 따라온다 */
+@media print {
+  :root {
+    --bg: #fff;
+    --panel: #fff;
+    --soft: #f3f6fb;
+    --line: #d3d9e3;
+    --line-strong: #aeb8c8;
+
+    --text: #101319;
+    --dim: #2c3340;
+    --muted: #5b6474;
+
+    --navy-deep: #eef3ff;
+    --navy: #dde7ff;
+    --blue: #1746c4;
+    --blue-line: #a8bcea;
+    --blue-soft: #1746c4;
+  }
+
+  @page {
+    margin: 14mm;
+  }
+
+  body {
+    background: #fff;
+  }
+
+  /* 뱃지·사진·지도의 배경색까지 인쇄되도록 (브라우저 기본은 배경 생략) */
+  .badge,
+  .id-photo-frame,
+  .focus-tag,
+  .tier-mark,
+  .travel-map,
+  .travel-land path {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* 화면 전용 요소 */
+  .noise,
+  .site-header,
+  .pdf-button,
+  .travel-tip {
+    display: none !important;
+  }
+
+  /* 등장 애니메이션이 끝나지 않은 섹션도 인쇄되도록 */
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  main > section {
+    padding-bottom: 26px;
+  }
+
+  .profile {
+    padding-top: 0;
+  }
+
+  /* 항목이 페이지 경계에서 잘리지 않게 */
+  .record,
+  .timeline article,
+  .panel,
+  .id-card,
+  .focus-box,
+  .travel-map {
+    break-inside: avoid;
+  }
+
+  h2,
+  .record h3,
+  .section-heading {
+    break-after: avoid;
+  }
+
+  /* 종이 폭에 맞춰 두 단으로 */
+  .profile-grid {
+    grid-template-columns: 250px 1fr;
+    grid-template-areas:
+      "id focus"
+      "id papers"
+      "id side"
+      "stack stack";
+  }
+
+  .id-column > :last-child,
+  .side-column > :last-child {
+    flex: none;
+  }
+
+  /* 지도는 잘리지 않게 전체 폭으로 */
+  .travel-map {
+    overflow: visible;
+  }
+
+  .travel-map svg {
+    min-width: 0;
+  }
+
+  .travel-land path {
+    fill: #e7ebf2;
+    stroke: #c9d1de;
+  }
+
+  .travel-land path.visited {
+    fill: #c6d8ff;
+    stroke: #7f9fe0;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+
+/* 14. 반응형 ============================================================== */
 
 @media (max-width: 1080px) {
   .profile-grid {
