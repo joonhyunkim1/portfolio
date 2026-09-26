@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="김준현 | 홍익대학교 전자전기공학과 석사과정 · Edge AI, Computer Vision, 산업 안전 모니터링" />
-    <title>김준현 · 연구 포트폴리오</title>
+    <title>김준현 · 포트폴리오</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -35,8 +35,8 @@
         <div class="section-heading profile-heading">
           <div>
             <p class="section-label">01</p>
-            <h2>연구 프로필</h2>
-            <p class="section-sub">Graduate Research Overview</p>
+            <h2>프로필</h2>
+            <p class="section-sub">Portfolio Overview</p>
           </div>
           <button
             type="button"
@@ -204,34 +204,39 @@
             </div>
 
             <div class="panel list-panel">
-              <p class="panel-label">개인·팀 프로젝트 <b>6건</b></p>
+              <p class="panel-label">개인·팀 프로젝트 <b>7건</b></p>
               <ul class="mini-list grant">
                 <li><a class="mini-link" href="#personal-1">
+                  <span class="badge solo">개인 프로젝트</span>
+                  <p>AI 프로젝트 매니저</p>
+                  <small>FastAPI · OpenAI · React · 2026.09</small>
+                </a></li>
+                <li><a class="mini-link" href="#personal-2">
                   <span class="badge solo">개인 프로젝트</span>
                   <p>ResumeAssistant — 로컬 RAG 기반 자기소개서 작성 도우미</p>
                   <small>FastAPI · OpenAI · Chroma · 2026.09</small>
                 </a></li>
-                <li><a class="mini-link" href="#personal-2">
+                <li><a class="mini-link" href="#personal-3">
                   <span class="badge solo">개인 프로젝트</span>
                   <p>AInstagram — AI 카드뉴스 자동 발행 파이프라인</p>
                   <small>GitHub Actions · Cloudflare R2 · 2026.08</small>
                 </a></li>
-                <li><a class="mini-link" href="#personal-3">
+                <li><a class="mini-link" href="#personal-4">
                   <span class="badge solo">개인 프로젝트</span>
                   <p>Daily Briefing — 개인화 AI 데일리 브리핑 이메일</p>
                   <small>Next.js · PostgreSQL · Vercel · 2026.07</small>
                 </a></li>
-                <li><a class="mini-link" href="#personal-4">
+                <li><a class="mini-link" href="#personal-5">
                   <span class="badge team">팀 프로젝트</span>
                   <p>코스피 7000간다 — 주식 시장 RAG 일일 증시 보고서</p>
                   <small>미래에셋 AI 페스티벌 · LlamaIndex · 2025.07</small>
                 </a></li>
-                <li><a class="mini-link" href="#personal-5">
+                <li><a class="mini-link" href="#personal-6">
                   <span class="badge team">팀 프로젝트</span>
                   <p>팔레타이징 적재 최적화 알고리즘 — CJ대한통운 미래기술챌린지</p>
                   <small>최종 임원 PT 진출 · EMS 휴리스틱 · 2024</small>
                 </a></li>
-                <li><a class="mini-link" href="#personal-6">
+                <li><a class="mini-link" href="#personal-7">
                   <span class="badge team">팀 프로젝트</span>
                   <p>게이미피케이션 요소를 결합한 학습 어플 개발</p>
                   <small>HIVE · Random Forest · 2022.10</small>
@@ -522,13 +527,42 @@
         <div class="section-heading">
           <p class="section-label">04</p>
           <h2>개인 · 팀 프로젝트</h2>
-          <p class="section-sub">Personal &amp; Team Projects · 개인 3건 · 팀 3건</p>
+          <p class="section-sub">Personal &amp; Team Projects · 개인 4건 · 팀 3건</p>
         </div>
 
         <ol class="record-list">
           <li class="record" id="personal-1">
             <div class="record-meta">
               <span class="record-no">01</span>
+              <span class="badge solo">개인 프로젝트</span>
+              <time>2026.09</time>
+            </div>
+            <div class="record-body">
+              <h3>AI 프로젝트 매니저</h3>
+              <p class="venue">FastAPI · OpenAI API · SQLite · React + Vite · Telegram Bot</p>
+              <p>
+                여러 개인 프로젝트의 상태를 주기적으로 점검해 멈춘 워크플로우·배포·서비스를 찾아 알리고,
+                점검 결과를 LLM이 읽어 예상 비용이 붙은 개선 제안을 만드는 로컬 에이전트입니다.
+                대시보드·Telegram 버튼·CLI에서 제안을 승인하면 코딩 에이전트에 넘길 작업 지시서가 생성됩니다.
+              </p>
+              <p>
+                점검은 LLM 없이 결정론적 체크로 돌리고, LLM은 변화가 있는 프로젝트만 월 예산 한도 안에서 호출합니다.
+                같은 입력으로 여러 조합을 실측해 Flex 처리와 명시적 프롬프트 캐시를 적용했고,
+                제안 품질을 유지한 채 호출 비용을 54% 줄였습니다.
+              </p>
+              <ul class="tags">
+                <li>Python</li>
+                <li>FastAPI</li>
+                <li>OpenAI API</li>
+                <li>SQLite</li>
+                <li>React</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="record" id="personal-2">
+            <div class="record-meta">
+              <span class="record-no">02</span>
               <span class="badge solo">개인 프로젝트</span>
               <time>2026.09</time>
             </div>
@@ -556,9 +590,9 @@
             </div>
           </li>
 
-          <li class="record" id="personal-2">
+          <li class="record" id="personal-3">
             <div class="record-meta">
-              <span class="record-no">02</span>
+              <span class="record-no">03</span>
               <span class="badge solo">개인 프로젝트</span>
               <time>2026.08</time>
             </div>
@@ -585,9 +619,9 @@
             </div>
           </li>
 
-          <li class="record" id="personal-3">
+          <li class="record" id="personal-4">
             <div class="record-meta">
-              <span class="record-no">03</span>
+              <span class="record-no">04</span>
               <span class="badge solo">개인 프로젝트</span>
               <time>2026.07</time>
             </div>
@@ -615,9 +649,9 @@
             </div>
           </li>
 
-          <li class="record" id="personal-4">
+          <li class="record" id="personal-5">
             <div class="record-meta">
-              <span class="record-no">04</span>
+              <span class="record-no">05</span>
               <span class="badge team">팀 프로젝트</span>
               <time>2025.07</time>
             </div>
@@ -644,9 +678,9 @@
             </div>
           </li>
 
-          <li class="record" id="personal-5">
+          <li class="record" id="personal-6">
             <div class="record-meta">
-              <span class="record-no">05</span>
+              <span class="record-no">06</span>
               <span class="badge team">팀 프로젝트</span>
               <time>2024</time>
             </div>
@@ -675,9 +709,9 @@
             </div>
           </li>
 
-          <li class="record" id="personal-6">
+          <li class="record" id="personal-7">
             <div class="record-meta">
-              <span class="record-no">06</span>
+              <span class="record-no">07</span>
               <span class="badge team">팀 프로젝트</span>
               <time>2022.10 — 2023.01</time>
             </div>
